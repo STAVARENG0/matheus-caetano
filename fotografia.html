@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Matheus Caetano | Fotografia
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root{
+    --red-neon:#ff1a1a;
+    --red-deep:#7f0b0b;
+    --ink:#0f172a;
+    --ink:#0f172a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:#fff;color:var(--ink);font-family:Poppins,system-ui,Arial,sans-serif;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:28px 20px}
+  header{text-align:center;margin-bottom:12px}
+  .title{font-family:"Playfair Display",serif;font-size:clamp(26px,5vw,42px);text-shadow:0 0 20px rgba(255,26,26,.28),0 0 40px rgba(127,11,11,.18);}
+  .subtitle{color:#6b7b8b;margin-top:6px;font-size:.95rem}
+  .divider{height:2px;background:linear-gradient(90deg,transparent,var(--red-neon),transparent);margin:18px 0}
+
+  /* GRADE DE MINI POLAROIDS (50px) */
+  .gallery, .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:24px;justify-items:center;align-items:start;}
+  .polaroid{width:clamp(110px, 28vw, 160px);
+    padding:5px 5px 10px;
+    background:#fff;
+    border:1px solid rgba(0,0,0,.12);
+    border-radius:8px;
+    box-shadow:0 6px 14px rgba(0,0,0,.10);
+    transform:rotate(var(--tilt));
+    transition:transform .18s ease, box-shadow .18s ease;
+    cursor:pointer;
+  }
+  .polaroid:hover{transform:rotate(var(--tilt)) scale(1.06);box-shadow:0 10px 22px rgba(0,0,0,.16);}
+  .polaroid img{display:block;width:100%;height:clamp(90px, 24vw, 140px);
+    object-fit:cover;
+    border-radius:5px;
+  }
+
+  /* LIGHTBOX */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(0,0,0,.82);
+    display:none;align-items:center;justify-content:center;z-index:50;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:min(92vw, 980px);max-height:min(86vh, 980px);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+  .closeX{
+    position:fixed;top:14px;right:18px;color:#fff;font-size:28px;cursor:pointer;
+    user-select:none;line-height:1;
+  }
+  .back{display:inline-block;margin-top:8px;color:#0b6ddf;text-decoration:none}
+
+  /* Tema vermelho */
+  .wrap{
+    border:1.8px solid rgba(255,26,26,.45);
+    border-radius:22px;
+    box-shadow:0 6px 24px rgba(255,26,26,.18);
+    background:#fff;
+  }
+  /* Polaroids com toque vermelho */
+  
+
+  /* Títulos de seção em vermelho */
+  .sec-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(22px,4.5vw,32px);
+    color:#7f0b0b;
+    text-shadow:0 0 14px rgba(255,26,26,.25),0 0 34px rgba(255,26,26,.18);
+    margin:0 0 10px;
+  }
+
+  /* Botão CTA igual ao Prompts (vermelho) */
+  .btn{
+    display:block;
+    width:100%;
+    max-width:360px;
+    margin:8px auto 16px;
+    padding:15px 16px;
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    background:linear-gradient(90deg,var(--red-neon),var(--red-deep));
+    border:none;
+    border-radius:30px;
+    box-shadow:0 0 18px rgba(255,26,26,.30),0 0 2px rgba(255,26,26,.60) inset;
+    transition:transform .22s ease, box-shadow .22s ease;
+    text-align:center;
+  }
+  .btn:hover{
+    transform:translateY(-1px) scale(1.02);
+    box-shadow:0 0 38px rgba(255,26,26,.5);
+  }
+
+  /* Título principal em vermelho */
+  .title{
+    color:#7f0b0b;
+    text-shadow:0 0 18px rgba(255,26,26,.25),0 0 40px rgba(127,11,11,.18);
+  }
+  </style>
+ </head>
+ <body>
+  <div class="wrap">
+   <header>
+    <div class="title">
+     Portfólio Fotográfico
+    </div>
+   </header>
+   <div class="divider">
+   </div>
+   <section class="gallery" id="gallery">
+   </section>
+   <div class="divider">
+   </div>
+   <section class="casamentos" style="text-align:center;margin:40px 0;">
+    <h2 class="sec-title">
+     Casamentos
+    </h2>
+    <div class="gallery" id="galleryWedding">
+    </div>
+   </section>
+   <div class="divider">
+   </div>
+   <section class="momentos" style="text-align:center;margin:40px 0;">
+    <h2 class="sec-title">
+     Momentos
+    </h2>
+    <div class="gallery" id="galleryMoments">
+    </div>
+   </section>
+   <div class="divider">
+   </div>
+   <section class="familia" style="text-align:center;margin:40px 0;">
+    <h2 class="sec-title">
+     Família
+    </h2>
+    <div class="gallery" id="galleryFamilia">
+    </div>
+   </section>
+   <div class="divider">
+   </div>
+   <section class="paisagens" style="text-align:center;margin:40px 0;">
+    <h2 class="sec-title">
+     Paisagens
+    </h2>
+    <div class="gallery" id="galleryPaisagens">
+    </div>
+   </section>
+   <div class="divider">
+   </div>
+   <div class="divider">
+   </div>
+   <a class="btn" href="https://wa.me/353877954824" target="_blank" rel="noopener">CONTRATE-ME</a>
+  </div>
+  <!-- Lightbox -->
+  <div aria-modal="true" class="lightbox" id="lb" role="dialog">
+   <div class="closeX" id="lbClose">
+    ✕
+   </div>
+   <img alt="visualização de fotografia" id="lbImg"/>
+  </div>
+  <script>
+   // Galeria principal
+    const photos = [
+      {"src":"WhatsApp Image 2025-07-09 at 6.56.14 AM.jpeg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-43-35-495_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-43-47-751_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-43-57-919_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-44-08-738_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-44-18-779_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-43-19-907_com.instagram.android-edit.jpg","caption":""},
+      {"src": "Screenshot_2025-08-25-15-43-08-431_com.instagram.android-edit.jpg","caption":""}
+    ];
+    const g = document.getElementById('gallery');
+    photos.forEach((p,i)=>{
+      const card=document.createElement('figure');card.className='polaroid';
+      const tilt=(i%6===0)?'-1.5deg':(i%6===1)?'1.8deg':(i%6===2)?'-2.2deg':(i%6===3)?'2deg':(i%6===4)?'-1deg':'1.2deg';
+      card.style.setProperty('--tilt',tilt);
+      const img=document.createElement('img');img.src=p.src;img.alt='Foto do portfólio';
+      card.appendChild(img);card.addEventListener('click',()=>openLb(p.src));
+      g.appendChild(card);
+    });
+
+    // Lightbox
+    const lb=document.getElementById('lb');const lbImg=document.getElementById('lbImg');const lbClose=document.getElementById('lbClose');
+    function openLb(src){lbImg.src=src;lb.classList.add('open');}
+    function closeLb(){lb.classList.remove('open');lbImg.removeAttribute('src');}
+    lb.addEventListener('click',(e)=>{if(e.target===lb)closeLb();});
+    lbClose.addEventListener('click',closeLb);
+    document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeLb();});
+    document.addEventListener('contextmenu',(e)=>{if(e.target&&e.target.tagName==='IMG'){e.preventDefault();}});
+
+    // Casamentos
+    const weddingPhotos=[
+      {"src":"Imagem do WhatsApp de 2025-08-25 à(s) 21.30.09_2fba01a6.jpg","caption":""},
+      {"src":"Imagem do WhatsApp de 2025-08-25 à(s) 21.30.09_ad0743c1.jpg","caption":""},
+      {"src":"Imagem do WhatsApp de 2025-08-25 à(s) 21.30.09_c912d311.jpg","caption":""},
+      {"src":"IMG_3104.jpg","caption":""},
+      {"src":"IMG_3129.jpg","caption":""}
+    ];
+    const g2=document.getElementById('galleryWedding');
+    weddingPhotos.forEach((p,i)=>{
+      const card=document.createElement('figure');card.className='polaroid';
+      const tilt=(i%6===0)?'-1.5deg':(i%6===1)?'1.8deg':(i%6===2)?'-2.2deg':(i%6===3)?'2deg':(i%6===4)?'-1deg':'1.2deg';
+      card.style.setProperty('--tilt',tilt);
+      const img=document.createElement('img');img.src=p.src;img.alt='casamento';
+      card.appendChild(img);card.addEventListener('click',()=>openLb(p.src));
+      g2.appendChild(card);
+    });
+
+    // Momentos
+    const momentsPhotos=[
+      
+      
+      {"src":"IMG_1067.PNG","caption":""},
+      {"src":"IMG_1061.PNG","caption":""},
+      {"src":"IMG_1065.PNG","caption":""},
+      {"src":"IMG_0623.jpg","caption":""},
+      {"src":"IMG_0716 - Copy.jpg","caption":""},
+      {"src":"IMG_1059.PNG","caption":""}
+    ];
+    const gm=document.getElementById('galleryMoments');
+    momentsPhotos.forEach((p,i)=>{
+      const card=document.createElement('figure');card.className='polaroid';
+      const tilt=(i%6===0)?'-1.5deg':(i%6===1)?'1.8deg':(i%6===2)?'-2.2deg':(i%6===3)?'2deg':(i%6===4)?'-1deg':'1.2deg';
+      card.style.setProperty('--tilt',tilt);
+      const img=document.createElement('img');img.src=p.src;img.alt='momentos';
+      card.appendChild(img);card.addEventListener('click',()=>openLb(p.src));
+      gm.appendChild(card);
+    });
+
+    // Família
+    const familiaPhotos=[
+      {"src": "IMG_9806.jpg", "caption": ""},
+      {"src": "IMG_9672.jpg", "caption": ""},
+      {"src": "IMG_1100.JPG", "caption": ""},
+      {"src": "20210822_171958-3.jpg", "caption": ""}
+    ];
+    const gf=document.getElementById('galleryFamilia');
+    familiaPhotos.forEach((p,i)=>{
+      const card=document.createElement('figure');card.className='polaroid';
+      const tilt=(i%6===0)?'-1.5deg':(i%6===1)?'1.8deg':(i%6===2)?'-2.2deg':(i%6===3)?'2deg':(i%6===4)?'-1deg':'1.2deg';
+      card.style.setProperty('--tilt',tilt);
+      const img=document.createElement('img');img.src=p.src;img.alt='família';
+      card.appendChild(img);card.addEventListener('click',()=>openLb(p.src));
+      gf.appendChild(card);
+    });
+
+    // Paisagens
+    const paisagensPhotos=[
+      {"src":"IMG_1069.JPG","caption":""},
+      {"src":"IMG_1068.JPG","caption":""},
+      {"src":"IMG_1080.JPG","caption":""},
+      {"src":"IMG_1079.JPG","caption":""},
+      {"src":"IMG_1076.JPG","caption":""},
+      {"src":"IMG_1077.JPG","caption":""},
+      {"src":"IMG_1082.JPG","caption":""},
+      {"src":"IMG_1073.JPG","caption":""}
+    ];
+    const gp=document.getElementById('galleryPaisagens');
+    paisagensPhotos.forEach((p,i)=>{
+      const card=document.createElement('figure');card.className='polaroid';
+      const tilt=(i%6===0)?'-1.5deg':(i%6===1)?'1.8deg':(i%6===2)?'-2.2deg':(i%6===3)?'2deg':(i%6===4)?'-1deg':'1.2deg';
+      card.style.setProperty('--tilt',tilt);
+      const img=document.createElement('img');img.src=p.src;img.alt='paisagem';
+      card.appendChild(img);card.addEventListener('click',()=>openLb(p.src));
+      gp.appendChild(card);
+    });
+  </script>
+ </body>
+</html>

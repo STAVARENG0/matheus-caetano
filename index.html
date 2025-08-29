@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Matheus Caetano | Links Final
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+   :root{
+      --red-neon:#ff1a1a;
+      --red-deep:#7f0b0b;
+      --ink:#0f172a;
+      --muted:#5b6b7b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:#fff;
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+    }
+    .wrap{max-width:560px;margin:0 auto;padding:26px}
+    .card{
+      background:#fff;
+      border-radius:26px;
+      padding:28px 22px;
+      box-shadow:0 12px 34px rgba(11,42,111,.12),0 0 26px rgba(255,26,26,.22);
+    }
+    header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+    .name{font-family:"Playfair Display",serif;font-size:clamp(24px,3.8vw,32px);font-weight:700;
+      text-shadow:0 0 14px rgba(255,26,26,.25),0 0 34px rgba(255,26,26,.18);
+    }
+    .role{
+      color:var(--muted);
+      font-size:.8rem;
+      line-height:1.3;
+      max-width:90%;
+      margin:0 auto;
+    }
+
+    /* LENTE */
+    .lens{width:210px;height:210px;border-radius:50%;position:relative;overflow:hidden;
+      border:3px solid rgba(255,26,26,.55);background:#f1f6fb;cursor:pointer;isolation:isolate;
+      box-shadow:inset 0 0 36px rgba(11,42,111,.10);}
+    .lens img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(50% at 50% 50%);z-index:0;}
+    .flash{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0;}
+    @keyframes snapFlash{0%{opacity:0;}12%{opacity:1;}100%{opacity:0;}}
+    .flash.fire{animation:snapFlash .28s ease-out forwards;}
+
+    /* Ícones sociais */
+    .socials{display:flex;justify-content:center;gap:30px;margin:20px 0;}
+    .socials a{font-size:28px;color:var(--red-neon);text-decoration:none;
+      transition:transform .2s ease, text-shadow .2s ease;}
+    .socials a:hover{transform:scale(1.15);text-shadow:0 0 12px var(--red-neon),0 0 24px var(--red-neon);}
+
+    /* Divisória neon */
+    .divider{height:2px;background:linear-gradient(90deg,transparent,var(--red-neon),transparent);margin:26px 0;}
+
+    /* Botões */
+    .links{display:flex;flex-direction:column;gap:0; margin-top:6px}
+    .btn{display:block;width:100%;max-width:360px;margin:8px auto 16px;padding:15px 16px;
+      font-size:16px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--red-neon),var(--red-deep));
+      border:none;border-radius:30px;text-decoration:none;
+      box-shadow:0 0 18px rgba(255,26,26,.3),0 0 2px rgba(255,26,26,.6) inset;
+      transition:transform .22s ease,box-shadow .22s ease;text-align:center;}
+    .btn:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 0 38px rgba(255,26,26,.5);}
+    .btn.secondary{background:#fff;color:var(--ink);border:1px solid rgba(255,26,26,.35);
+      box-shadow:0 10px 24px rgba(11,42,111,.08);}
+    .btn.secondary:hover{transform:translateY(-1px);border-color:var(--red-neon);}
+
+    footer{text-align:center;color:#6b7b8b;font-size:.9rem;margin-top:20px}
+  
+.btn.image-only{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:360px;
+  margin:8px auto 16px;
+  padding:0;
+  height:80px;
+  border-radius:30px;
+  overflow:hidden;
+  background:transparent;
+  border:1px solid rgba(255,26,26,.35);
+  box-shadow:0 10px 24px rgba(11,42,111,.08);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.btn.image-only.tall{
+  height:120px; /* aumenta só o botão Portfólio */
+}
+.btn.image-only:hover{
+  transform:translateY(-1px);
+  border-color:var(--red-neon);
+  box-shadow:0 0 24px rgba(255,26,26,.35);
+}
+.btn.image-only .btn-img{
+  display:block;
+  max-width:100%;
+  max-height:100%;
+  margin:auto;
+  object-fit:contain;
+}
+  </style>
+ </head>
+ <body>
+  <div class="wrap">
+   <div class="card">
+    <header>
+     <div class="lens" id="lens">
+      <img alt="Foto de Matheus Caetano" src="foto-matheus.jpg"/>
+      <svg height="100%" id="irisSvg" style="position:absolute;inset:0;z-index:4;" viewBox="-110 -110 220 220" width="100%">
+       <defs>
+        <linearGradient id="steelBase" x1="0%" x2="100%" y1="0%" y2="100%">
+         <stop offset="0" stop-color="#e9ecef"></stop>
+         <stop offset="45%" stop-color="#9aa1ab"></stop>
+         <stop offset="70%" stop-color="#5e6672"></stop>
+         <stop offset="100%" stop-color="#cfd4d9"></stop>
+        </linearGradient>
+        <radialGradient id="edgeFade" r="1">
+         <stop offset="0.0" stop-color="#fff"></stop>
+         <stop offset="0.86" stop-color="#fff"></stop>
+         <stop offset="1.0" stop-color="#000"></stop>
+        </radialGradient>
+        <mask id="fadeMask">
+         <rect fill="url(#edgeFade)" height="220" width="220" x="-110" y="-110"></rect>
+        </mask>
+       </defs>
+       <g id="blades" mask="url(#fadeMask)" opacity="0.6"></g>
+      </svg>
+      <div class="flash" id="flash" style="background:radial-gradient(circle at 50% 50%,rgba(255,255,255,1),rgba(255,255,255,.75) 40%,rgba(255,255,255,0) 70%);"></div>
+     </div>
+     <div class="name">Matheus Caetano</div>
+     <div class="role">
+      Empreendedor desde os 9 anos de idade, atuando no setor de tecnologia e no ramo alimentício. 
+      Ativo no mercado de publicidade desde antes da era digital. 
+      Hoje sou perito em propaganda e divulgação. 
+      Meu maior objetivo é fazer você ganhar dinheiro, independente do seu produto ou serviço: 
+      eu levo você até o seu público ideal.
+     </div>
+    </header>
+    <div class="divider"></div>
+    <!-- Ícones sociais -->
+    <div class="socials">
+     <a href="https://www.instagram.com/caetano_exe?igsh=bTFoY25weGI4eGEy" target="_blank" rel="noopener noreferrer" title="Instagram @caetano_exe">
+      <i class="fab fa-instagram"></i>
+     </a>
+     <a href="https://wa.me/353877954824" target="_blank" rel="noopener noreferrer" title="WhatsApp +353 87 795 4824">
+      <i class="fab fa-whatsapp"></i>
+     </a>
+    </div>
+    <div class="divider"></div>
+    <!-- Botões -->
+    <nav class="links">
+     <a class="btn" href="prompts.html">Prompts Grátis</a>
+     <a class="btn image-only" href="https://www.instagram.com/goviral.online?igsh=NWMzYmFiMTI5bTRi" target="_blank" rel="noopener noreferrer">
+      <img alt="GoViral" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 09_18_19.png"/>
+     </a>
+     <a class="btn image-only" href="https://www.instagram.com/docinhos.tropical?igsh=aHgydXk2MXo4Z3dj" target="_blank" rel="noopener noreferrer">
+      <img alt="Docinhos Tropical" class="btn-img" src="docinhostropical.png"/>
+     </a>
+     <a class="btn image-only" href="https://www.instagram.com/world.yakisoba?igsh=MXE4bTN3andnaGF5ag==" target="_blank" rel="noopener noreferrer">
+      <img alt="World Yakisoba" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_40_34.png"/>
+     </a>
+     <a class="btn image-only tall" href="fotografia.html">
+      <img alt="Portfólio de Fotos" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_54_04.png"/>
+     </a>
+    </nav>
+    <div class="divider"></div>
+    <footer>
+     © <span id="y"></span> Matheus Caetano
+    </footer>
+   </div>
+  </div>
+  <script>
+   (function(){
+    const N=6,R=106,INNER_MIN=1,INNER_MAX=130,ROT_SPAN=18;
+    const bladesG=document.getElementById('blades');
+    function rad(d){return d*Math.PI/180;}
+    function polar(r,a){return [r*Math.cos(rad(a)),r*Math.sin(rad(a))];}
+    function bladePath(i,t){
+      const theta=i*(360/N);const rot=theta+(1-t)*ROT_SPAN;const half=360/N/2;
+      const o1=polar(R+20,rot-half*1.02);const o2=polar(R+20,rot+half*1.02);
+      const ri=INNER_MIN+t*(INNER_MAX-INNER_MIN);
+      const span=half*1.1;const a0=rot+180/N-span/2;const a1=rot+180/N+span/2;
+      const i0=polar(ri,a0);const i1=polar(ri,a1);
+      const arc=`A ${ri.toFixed(2)} ${ri.toFixed(2)} 0 0 0 ${i0[0].toFixed(2)} ${i0[1].toFixed(2)}`;
+      return `M ${o1[0].toFixed(2)} ${o1[1].toFixed(2)} L ${o2[0].toFixed(2)} ${o2[1].toFixed(2)} L ${i1[0].toFixed(2)} ${i1[1].toFixed(2)} ${arc} Z`;
+    }
+    const elems=[];
+    for(let i=0;i<N;i++){const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('fill','url(#steelBase)');p.setAttribute('stroke','rgba(0,0,0,.12)');
+      p.setAttribute('stroke-width','0.5');bladesG.appendChild(p);elems.push(p);}
+    function render(t){for(let i=0;i<N;i++){elems[i].setAttribute('d',bladePath(i,t));}}
+    const lens=document.getElementById('lens');const flash=document.getElementById('flash');let anim=null,t=0;
+    function play(dur=2200){if(anim)cancelAnimationFrame(anim);const start=performance.now();t=0;
+      function step(now){const p=Math.min(1,(now-start)/dur);t=p;render(t);
+        if(p<1){anim=requestAnimationFrame(step);}else{flash.classList.add('fire');setTimeout(()=>flash.classList.remove('fire'),300);lens.classList.add('open');}}anim=requestAnimationFrame(step);}
+    function closeQuick(dur=220){if(anim)cancelAnimationFrame(anim);const start=performance.now();const t0=t;
+      function step(now){const p=Math.min(1,(now-start)/dur);render(t0*(1-p));if(p<1){anim=requestAnimationFrame(step);}else{t=0;lens.classList.remove('open');}}anim=requestAnimationFrame(step);}
+    render(0);setTimeout(()=>play(2200),700);
+    lens.addEventListener('click',()=>{if(t>=1){closeQuick();setTimeout(()=>play(2200),280);}else{play(2200);}});
+  })();
+  document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
+ </body>
+</html>
