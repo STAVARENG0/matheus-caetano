@@ -1,185 +1,244 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Matheus Caetano | Links Final
-  </title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<title>Matheus Caetano | Links Final</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <style>
-   :root{
-      --red-neon:#ff1a1a;
-      --red-deep:#7f0b0b;
-      --ink:#0f172a;
-      --muted:#5b6b7b;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:#fff;
-      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--ink);
-    }
-    .wrap{max-width:560px;margin:0 auto;padding:26px}
-    .card{
-      background:#fff;
-      border-radius:26px;
-      padding:28px 22px;
-      box-shadow:0 12px 34px rgba(11,42,111,.12),0 0 26px rgba(255,26,26,.22);
-    }
-    header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
-    .name{font-family:"Playfair Display",serif;font-size:clamp(24px,3.8vw,32px);font-weight:700;
-      text-shadow:0 0 14px rgba(255,26,26,.25),0 0 34px rgba(255,26,26,.18);
-    }
-    .role{
-      color:var(--muted);
-      font-size:.8rem;
-      line-height:1.3;
-      max-width:90%;
-      margin:0 auto;
-    }
+  :root{
+    --gold:#D4AF37;
+    --gold-light:#F5D76E;
+    --gold-deep:#8D6E21;
+    --ink:#F0E6C8;
+    --muted:#C6B98A;
+    --coal:#0B0F16;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background: var(--coal) fixed no-repeat center/cover;
+    background-image:url('pngtree-abstract-golden-metal-background-gradient-background-premium-image_733934.jpg');
+    min-height:100dvh;
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:26px}
+  .card{
+    background:rgba(7,9,14,.55);
+    backdrop-filter:saturate(120%) blur(6px);
+    border-radius:26px;
+    padding:28px 22px;
+    border:1px solid rgba(212,175,55,.35);
+    box-shadow:0 18px 42px rgba(0,0,0,.45), 0 0 26px rgba(212,175,55,.18);
+  }
+  header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+  .name{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(24px,3.8vw,32px);
+    font-weight:700;
+    letter-spacing:.3px;
+    text-shadow:0 0 14px rgba(212,175,55,.28),0 0 34px rgba(212,175,55,.18);
+  }
+  .role{
+    color:var(--muted);
+    font-size:.8rem;
+    line-height:1.4;
+    max-width:90%;
+    margin:0 auto;
+  }
 
-    /* LENTE */
-    .lens{width:210px;height:210px;border-radius:50%;position:relative;overflow:hidden;
-      border:3px solid rgba(255,26,26,.55);background:#f1f6fb;cursor:pointer;isolation:isolate;
-      box-shadow:inset 0 0 36px rgba(11,42,111,.10);}
-    .lens img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(50% at 50% 50%);z-index:0;}
-    .flash{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0;}
-    @keyframes snapFlash{0%{opacity:0;}12%{opacity:1;}100%{opacity:0;}}
-    .flash.fire{animation:snapFlash .28s ease-out forwards;}
+  /* LENTE */
+  .lens{
+    width:210px;height:210px;border-radius:50%;position:relative;overflow:hidden;
+    border:3px solid rgba(212,175,55,.65);
+    background:linear-gradient(180deg, rgba(245,215,110,.06), rgba(0,0,0,.08));
+    cursor:pointer;isolation:isolate;
+    box-shadow:inset 0 0 36px rgba(0,0,0,.25), 0 0 22px rgba(212,175,55,.25);
+  }
+  .lens img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    border-radius:50%; /* corte perfeito */
+    z-index:0;
+  }
+  .flash{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0;}
+  @keyframes snapFlash{0%{opacity:0;}12%{opacity:1;}100%{opacity:0;}}
+  .flash.fire{animation:snapFlash .28s ease-out forwards;}
 
-    /* Ícones sociais */
-    .socials{display:flex;justify-content:center;gap:30px;margin:20px 0;}
-    .socials a{font-size:28px;color:var(--red-neon);text-decoration:none;
-      transition:transform .2s ease, text-shadow .2s ease;}
-    .socials a:hover{transform:scale(1.15);text-shadow:0 0 12px var(--red-neon),0 0 24px var(--red-neon);}
+  .socials{display:flex;justify-content:center;gap:30px;margin:20px 0;}
+  .socials a{
+    font-size:28px;color:var(--gold);text-decoration:none;
+    transition:transform .2s ease, text-shadow .2s ease, color .2s ease;
+  }
+  .socials a:hover{
+    transform:scale(1.15);
+    color:var(--gold-light);
+    text-shadow:0 0 14px rgba(212,175,55,.65), 0 0 28px rgba(245,215,110,.45);
+  }
 
-    /* Divisória neon */
-    .divider{height:2px;background:linear-gradient(90deg,transparent,var(--red-neon),transparent);margin:26px 0;}
+  .divider{
+    height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    margin:26px 0;
+  }
 
-    /* Botões */
-    .links{display:flex;flex-direction:column;gap:0; margin-top:6px}
-    .btn{display:block;width:100%;max-width:360px;margin:8px auto 16px;padding:15px 16px;
-      font-size:16px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--red-neon),var(--red-deep));
-      border:none;border-radius:30px;text-decoration:none;
-      box-shadow:0 0 18px rgba(255,26,26,.3),0 0 2px rgba(255,26,26,.6) inset;
-      transition:transform .22s ease,box-shadow .22s ease;text-align:center;}
-    .btn:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 0 38px rgba(255,26,26,.5);}
-    .btn.secondary{background:#fff;color:var(--ink);border:1px solid rgba(255,26,26,.35);
-      box-shadow:0 10px 24px rgba(11,42,111,.08);}
-    .btn.secondary:hover{transform:translateY(-1px);border-color:var(--red-neon);}
+  .links{display:flex;flex-direction:column;gap:0; margin-top:6px}
+  .btn{
+    display:block;width:100%;max-width:360px;margin:8px auto 16px;padding:15px 16px;
+    font-size:16px;font-weight:700;
+    color:#0B0F16;
+    background:linear-gradient(90deg,var(--gold-light),var(--gold-deep));
+    border:none;border-radius:30px;text-decoration:none;
+    box-shadow:0 0 18px rgba(212,175,55,.35),0 0 2px rgba(245,215,110,.55) inset;
+    transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;text-align:center;
+  }
+  .btn:hover{
+    transform:translateY(-1px) scale(1.02);
+    box-shadow:0 0 38px rgba(212,175,55,.55);
+    filter:brightness(1.05);
+  }
+  .btn.secondary{
+    background:transparent;
+    color:var(--gold-light);
+    border:1px solid rgba(212,175,55,.55);
+    box-shadow:0 10px 24px rgba(0,0,0,.22);
+  }
+  .btn.secondary:hover{
+    transform:translateY(-1px);
+    border-color:var(--gold);
+    box-shadow:0 0 24px rgba(212,175,55,.35);
+  }
 
-    footer{text-align:center;color:#6b7b8b;font-size:.9rem;margin-top:20px}
-  
-.btn.image-only{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  max-width:360px;
-  margin:8px auto 16px;
-  padding:0;
-  height:80px;
-  border-radius:30px;
-  overflow:hidden;
-  background:transparent;
-  border:1px solid rgba(255,26,26,.35);
-  box-shadow:0 10px 24px rgba(11,42,111,.08);
-  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-}
-.btn.image-only.tall{
-  height:120px; /* aumenta só o botão Portfólio */
-}
-.btn.image-only:hover{
-  transform:translateY(-1px);
-  border-color:var(--red-neon);
-  box-shadow:0 0 24px rgba(255,26,26,.35);
-}
-.btn.image-only .btn-img{
-  display:block;
-  max-width:100%;
-  max-height:100%;
-  margin:auto;
-  object-fit:contain;
-}
-  </style>
+  footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:20px}
+
+  .btn.image-only{
+    display:flex;align-items:center;justify-content:center;width:100%;max-width:360px;
+    margin:8px auto 16px;padding:0;height:80px;border-radius:30px;overflow:hidden;
+    background:rgba(0,0,0,.25);
+    border:1px solid rgba(212,175,55,.45);
+    box-shadow:0 10px 24px rgba(0,0,0,.22);
+    transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, filter .22s ease;
+  }
+  .btn.image-only.tall{height:120px;}
+  .btn.image-only:hover{
+    transform:translateY(-1px);
+    border-color:var(--gold);
+    box-shadow:0 0 24px rgba(212,175,55,.35);
+    filter:brightness(1.04);
+  }
+  .btn.image-only .btn-img{
+    display:block;max-width:100%;max-height:100%;margin:auto;object-fit:contain;
+  }
+
+  #irisSvg stop[stop-color="#e9ecef"]{stop-color:#F3E7B8;}
+  #irisSvg stop[stop-color="#9aa1ab"]{stop-color:#C2A85B;}
+  #irisSvg stop[stop-color="#5e6672"]{stop-color:#8D6E21;}
+  #irisSvg stop[stop-color="#cfd4d9"]{stop-color:#E4D39A;}
+
+  /* Correção: quando a lente abre, escondemos o SVG para evitar artefatos */
+  .lens svg{transition:opacity .25s ease; pointer-events:none;}
+  .lens.open svg{opacity:0;}
+  /* Refino anti-alias nas bordas da imagem */
+  .lens img{backface-visibility:hidden; -webkit-backface-visibility:hidden;}
+
+
+  /* Anel de cobertura para tampar a brecha entre a borda e a espátula */
+  .lens-cover{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    border:3px solid rgba(212,175,55,.65); /* igual à borda da .lens */
+    pointer-events:none;
+    z-index:7; /* acima do flash (6) e das lâminas (4), discreto */
+  }
+
+
+  /* --- Reactive gold field (background canvas) --- */
+  #reactiveField{
+    position: fixed;
+    inset: 0;
+    z-index: 0;          /* fica atrás do conteúdo */
+    pointer-events: none;/* não intercepta cliques */
+  }
+  /* garantir que o conteúdo fique acima do canvas */
+  .wrap, .card { position: relative; z-index: 1; }
+
+</style>
 </head>
 <body>
+<canvas id="reactiveField" aria-hidden="true"></canvas>
 <div class="wrap">
-<div class="card">
-<header>
-<div class="lens" id="lens">
-<img alt="Foto de Matheus Caetano" src="foto-matheus.jpg"/>
-<svg height="100%" id="irisSvg" style="position:absolute;inset:0;z-index:4;" viewbox="-110 -110 220 220" width="100%">
-<defs>
-<lineargradient id="steelBase" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0" stop-color="#e9ecef"></stop>
-<stop offset="45%" stop-color="#9aa1ab"></stop>
-<stop offset="70%" stop-color="#5e6672"></stop>
-<stop offset="100%" stop-color="#cfd4d9"></stop>
-</lineargradient>
-<radialgradient id="edgeFade" r="1">
-<stop offset="0.0" stop-color="#fff"></stop>
-<stop offset="0.86" stop-color="#fff"></stop>
-<stop offset="1.0" stop-color="#000"></stop>
-</radialgradient>
-<mask id="fadeMask">
-<rect fill="url(#edgeFade)" height="220" width="220" x="-110" y="-110"></rect>
-</mask>
-</defs>
-<g id="blades" mask="url(#fadeMask)" opacity="0.6"></g>
-</svg>
-<div class="flash" id="flash" style="background:radial-gradient(circle at 50% 50%,rgba(255,255,255,1),rgba(255,255,255,.75) 40%,rgba(255,255,255,0) 70%);"></div>
+  <div class="card">
+    <header>
+      <div class="lens" id="lens">
+        <img src="foto-matheus.jpg" alt="Foto de Matheus Caetano"/>
+        <svg id="irisSvg" width="100%" height="100%" viewBox="-110 -110 220 220" style="position:absolute;inset:0;z-index:4;">
+          <defs>
+            <linearGradient id="steelBase" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0" stop-color="#e9ecef"></stop>
+              <stop offset="45%" stop-color="#9aa1ab"></stop>
+              <stop offset="70%" stop-color="#5e6672"></stop>
+              <stop offset="100%" stop-color="#cfd4d9"></stop>
+            </linearGradient>
+            <radialGradient id="edgeFade" r="1">
+              <stop offset="0.0" stop-color="#fff"></stop>
+              <stop offset="0.86" stop-color="#fff"></stop>
+              <stop offset="1.0" stop-color="#000"></stop>
+            </radialGradient>
+            <mask id="fadeMask">
+              <rect x="-110" y="-110" width="220" height="220" fill="url(#edgeFade)"></rect>
+            </mask>
+          </defs>
+          <g id="blades" mask="url(#fadeMask)" opacity="0.6"></g>
+        </svg>
+        <div id="flash" class="flash" style="background:radial-gradient(circle at 50% 50%,rgba(255,255,255,1),rgba(255,255,255,.75) 40%,rgba(255,255,255,0) 70%);"></div>
+        <!-- Anel para tampar a brecha -->
+        <div class="lens-cover"></div>
+      </div>
+      <div class="name">Matheus Caetano</div>
+      <div class="role">
+        Empreendedor desde os 9 anos de idade, atuando no setor de tecnologia e no ramo alimentício. 
+        Ativo no mercado de publicidade desde antes da era digital. 
+        Hoje sou perito em propaganda e divulgação. 
+        Meu maior objetivo é fazer você ganhar dinheiro, independente do seu produto ou serviço: 
+        eu levo você até o seu público ideal.
+      </div>
+    </header>
+    <div class="divider"></div>
+    <div class="socials">
+      <a href="https://www.instagram.com/caetano_exe?igsh=bTFoY25weGI4eGEy" target="_blank" rel="noopener noreferrer" title="Instagram @caetano_exe">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/353877954824" target="_blank" rel="noopener noreferrer" title="WhatsApp +353 87 795 4824">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="divider"></div>
+    <nav class="links">
+      <a class="btn" href="ebook.html">Ebook Gratuito</a>
+      <a class="btn image-only" href="https://www.instagram.com/goviral.online?igsh=NWMzYmFiMTI5bTRi" target="_blank" rel="noopener noreferrer">
+        <img class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 09_18_19.png" alt="GoViral">
+      </a>
+      <a class="btn image-only" href="https://www.instagram.com/docinhos.tropical?igsh=aHgydXk2MXo4Z3dj" target="_blank" rel="noopener noreferrer">
+        <img class="btn-img" src="docinhostropical.png" alt="Docinhos Tropical">
+      </a>
+      <a class="btn image-only" href="https://www.instagram.com/world.yakisoba?igsh=MXE4bTN3andnaGF5ag==" target="_blank" rel="noopener noreferrer">
+        <img class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_40_34.png" alt="World Yakisoba">
+      </a>
+      <a class="btn image-only tall" href="fotografia.html">
+        <img class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_54_04.png" alt="Portfólio de Fotos">
+      </a>
+    </nav>
+    <div class="divider"></div>
+    <footer>© <span id="y"></span> Matheus Caetano</footer>
+  </div>
 </div>
-<div class="name">Matheus Caetano</div>
-<div class="role">
-      Empreendedor desde os 9 anos de idade, atuando no setor de tecnologia e no ramo alimentício. 
-      Ativo no mercado de publicidade desde antes da era digital. 
-      Hoje sou perito em propaganda e divulgação. 
-      Meu maior objetivo é fazer você ganhar dinheiro, independente do seu produto ou serviço: 
-      eu levo você até o seu público ideal.
-     </div>
-</header>
-<div class="divider"></div>
-<!-- Ícones sociais -->
-<div class="socials">
-<a href="https://www.instagram.com/caetano_exe?igsh=bTFoY25weGI4eGEy" rel="noopener noreferrer" target="_blank" title="Instagram @caetano_exe">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://wa.me/353877954824" rel="noopener noreferrer" target="_blank" title="WhatsApp +353 87 795 4824">
-<i class="fab fa-whatsapp"></i>
-</a>
-</div>
-<div class="divider"></div>
-<!-- Botões -->
-<nav class="links">
-<a class="btn" href="ebook.html">Ebook Gratuito</a>
-<a class="btn image-only" href="https://www.instagram.com/goviral.online?igsh=NWMzYmFiMTI5bTRi" rel="noopener noreferrer" target="_blank">
-<img alt="GoViral" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 09_18_19.png"/>
-</a>
-<a class="btn image-only" href="https://www.instagram.com/docinhos.tropical?igsh=aHgydXk2MXo4Z3dj" rel="noopener noreferrer" target="_blank">
-<img alt="Docinhos Tropical" class="btn-img" src="docinhostropical.png"/>
-</a>
-<a class="btn image-only" href="https://www.instagram.com/world.yakisoba?igsh=MXE4bTN3andnaGF5ag==" rel="noopener noreferrer" target="_blank">
-<img alt="World Yakisoba" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_40_34.png"/>
-</a>
-<a class="btn image-only tall" href="fotografia.html">
-<img alt="Portfólio de Fotos" class="btn-img" src="ChatGPT Image 28 de ago. de 2025, 12_54_04.png"/>
-</a>
-</nav>
-<div class="divider"></div>
-<footer>
-     © <span id="y"></span> Matheus Caetano
-    </footer>
-</div>
-</div>
+
 <script>
-   (function(){
+  (function(){
     const N=6,R=106,INNER_MIN=1,INNER_MAX=130,ROT_SPAN=18;
     const bladesG=document.getElementById('blades');
     function rad(d){return d*Math.PI/180;}
@@ -194,9 +253,13 @@
       return `M ${o1[0].toFixed(2)} ${o1[1].toFixed(2)} L ${o2[0].toFixed(2)} ${o2[1].toFixed(2)} L ${i1[0].toFixed(2)} ${i1[1].toFixed(2)} ${arc} Z`;
     }
     const elems=[];
-    for(let i=0;i<N;i++){const p=document.createElementNS('http://www.w3.org/2000/svg','path');
-      p.setAttribute('fill','url(#steelBase)');p.setAttribute('stroke','rgba(0,0,0,.12)');
-      p.setAttribute('stroke-width','0.5');bladesG.appendChild(p);elems.push(p);}
+    for(let i=0;i<N;i++){
+      const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('fill','url(#steelBase)');
+      p.setAttribute('stroke','rgba(0,0,0,.22)');
+      p.setAttribute('stroke-width','0.5');
+      bladesG.appendChild(p);elems.push(p);
+    }
     function render(t){for(let i=0;i<N;i++){elems[i].setAttribute('d',bladePath(i,t));}}
     const lens=document.getElementById('lens');const flash=document.getElementById('flash');let anim=null,t=0;
     function play(dur=2200){if(anim)cancelAnimationFrame(anim);const start=performance.now();t=0;
@@ -208,6 +271,189 @@
     lens.addEventListener('click',()=>{if(t>=1){closeQuick();setTimeout(()=>play(2200),280);}else{play(2200);}});
   })();
   document.getElementById('y').textContent=new Date().getFullYear();
-  </script>
+</script>
+
+<script>
+(() => {
+  // Paleta dourada do site
+  const GOLD = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim() || '#D4AF37';
+  const GOLD_LIGHT = getComputedStyle(document.documentElement).getPropertyValue('--gold-light').trim() || '#F5D76E';
+  const GOLD_DEEP = getComputedStyle(document.documentElement).getPropertyValue('--gold-deep').trim() || '#8D6E21';
+
+  // Configurações principais
+  const MAX_PARTICLES_BASE = 135;          // base; escalar por área
+  const LINK_DIST = 170;                    // distância máx. para conectar
+  const SAFETY_MARGIN = 22;                 // margem para "não encostar"
+  const MOUSE_REPEL_RADIUS = 120 + SAFETY_MARGIN; // repulsão começa antes do mouse chegar
+  const MOUSE_FORCE = 0.14;                 // força da repulsão
+  const SPEED = 0.55;                       // velocidade base das partículas
+  const FRICTION = 0.965;                   // amortecimento para movimento suave
+  const CURVE = true;                       // linhas levemente curvas
+  const GLOW = true;                        // brilho suave
+
+  const canvas = document.getElementById('reactiveField');
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+  let W=0, H=0;
+
+  function resize(){
+    W = canvas.clientWidth = window.innerWidth;
+    // altura precisa cobrir a página toda, mesmo com scroll
+    H = canvas.clientHeight = Math.max(window.innerHeight, document.body.scrollHeight);
+    canvas.width = Math.floor(W * DPR);
+    canvas.height = Math.floor(H * DPR);
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Partículas
+  const pts = [];
+  function rand(min,max){ return Math.random()*(max-min)+min; }
+  function init(){
+    pts.length = 0;
+    // escalar quantidade por área para manter densidade agradável
+    const area = W * H;
+    const target = Math.min(250, Math.round(MAX_PARTICLES_BASE * (area / (1200*900))));
+    for(let i=0;i<target;i++){
+      pts.push({
+        x: rand(0,W),
+        y: rand(0,H),
+        vx: rand(-SPEED,SPEED),
+        vy: rand(-SPEED,SPEED),
+        r: rand(2.1,3.6)
+      });
+    }
+  }
+  init();
+  window.addEventListener('resize', init);
+
+  // Mouse (posição e estado)
+  const mouse = { x:-9999, y:-9999, active:false };
+  document.addEventListener('mousemove', (e)=>{
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+    mouse.active = true;
+  }, {passive:true});
+  document.addEventListener('mouseleave', ()=>{ mouse.active = false; }, {passive:true});
+
+  // Desenho das bolinhas (pontos)
+  function drawDot(p){
+    const g = ctx.createRadialGradient(p.x-1, p.y-1, 0, p.x, p.y, p.r*1.6);
+    g.addColorStop(0, GOLD_LIGHT);
+    g.addColorStop(0.55, GOLD);
+    g.addColorStop(1, GOLD_DEEP);
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+    if(GLOW){
+      ctx.save();
+      ctx.globalAlpha = .25;
+      ctx.shadowColor = GOLD;
+      ctx.shadowBlur = 10;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+  // Desenho das ligações (linhas)
+  function drawLink(a,b,dist){
+    const t = 1 - (dist / LINK_DIST); // 0..1
+    const lw = 1 + t * 2.2;
+    const alpha = 0.12 + t * 0.6;
+
+    const grad = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
+    grad.addColorStop(0, GOLD);
+    grad.addColorStop(0.5, GOLD_LIGHT);
+    grad.addColorStop(1, GOLD);
+
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = lw;
+    ctx.globalAlpha = alpha;
+
+    if(CURVE){
+      // curva leve perpendicular, mais curvatura quanto mais perto (efeito líquido)
+      const mx = (a.x + b.x)/2, my = (a.y + b.y)/2;
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const len = Math.hypot(dx,dy)||1;
+      const nx = -dy/len, ny = dx/len;
+      const bend = 10 + 26 * t;
+      const cx = mx + nx * bend;
+      const cy = my + ny * bend;
+      ctx.beginPath();
+      ctx.moveTo(a.x,a.y);
+      ctx.quadraticCurveTo(cx,cy,b.x,b.y);
+      ctx.stroke();
+    }else{
+      ctx.beginPath();
+      ctx.moveTo(a.x,a.y);
+      ctx.lineTo(b.x,b.y);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  // Simulação: repulsão antecipada (óleo & água)
+  function step(){
+    ctx.clearRect(0,0,W,H);
+
+    for(const p of pts){
+      // Repulsão começa antes do mouse "encostar"
+      if(mouse.active){
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const d2 = dx*dx + dy*dy;
+        const r2 = MOUSE_REPEL_RADIUS * MOUSE_REPEL_RADIUS;
+        if(d2 < r2){
+          const d = Math.sqrt(d2) || 0.0001;
+          const force = (1 - d / MOUSE_REPEL_RADIUS) * MOUSE_FORCE;
+          // empurra para fora (escape suave)
+          p.vx += (dx / d) * force * 5.0;
+          p.vy += (dy / d) * force * 5.0;
+        }
+      }
+
+      // leve ruído para organicidade
+      p.vx += (Math.random()-0.5)*0.02;
+      p.vy += (Math.random()-0.5)*0.02;
+
+      // integrar
+      p.vx *= FRICTION;
+      p.vy *= FRICTION;
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // limites com bounce suave
+      if(p.x < 0){ p.x = 0; p.vx = Math.abs(p.vx); }
+      if(p.x > W){ p.x = W; p.vx = -Math.abs(p.vx); }
+      if(p.y < 0){ p.y = 0; p.vy = Math.abs(p.vy); }
+      if(p.y > H){ p.y = H; p.vy = -Math.abs(p.vy); }
+    }
+
+    // Desenhar ligações (pares próximos)
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const a = pts[i], b = pts[j];
+        const dx = b.x - a.x, dy = b.y - a.y;
+        const dist = Math.hypot(dx,dy);
+        if(dist < LINK_DIST){
+          drawLink(a,b,dist);
+        }
+      }
+    }
+
+    // bolinhas por cima
+    for(const p of pts) drawDot(p);
+
+    requestAnimationFrame(step);
+  }
+  step();
+})();
+</script>
+
 </body>
 </html>
