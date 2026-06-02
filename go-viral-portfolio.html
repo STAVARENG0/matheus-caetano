@@ -3,71 +3,281 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Go Viral Portfolio | E-commerce Systems</title>
-  <meta name="description" content="Go Viral portfolio with e-commerce plans, technology comparison and marketing assets in Portuguese and English." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Go Viral Portfólio | E-commerce</title>
+  <meta name="description" content="Planos Go Viral para e-commerce profissional, automação, pagamento, pedidos, estoque e fidelização." />
   <style>
-    :root{--bg:#050505;--panel:#101010;--paper:#f8f8f7;--line:rgba(255,255,255,.14);--muted:#b9b9b9;--red:#e60000;--red2:#9f0000;--white:#fff;--black:#090909;--radius:28px;--shadow:0 22px 60px rgba(230,0,0,.16)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--white);background:radial-gradient(circle at 80% 12%,rgba(230,0,0,.3),transparent 28%),radial-gradient(circle at 12% 18%,rgba(255,255,255,.09),transparent 20%),linear-gradient(135deg,#020202,#111 52%,#030303);min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(230,0,0,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at center,black,transparent 78%)}
-    .wrap{width:min(1180px,calc(100% - 28px));margin:0 auto;position:relative;z-index:1}.hero{padding:46px 0 22px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}.badge{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(230,0,0,.5);background:rgba(230,0,0,.12);border-radius:999px;padding:10px 14px;color:#fff;font-weight:900;letter-spacing:.04em}.hero h1{font-size:clamp(44px,7vw,88px);line-height:.92;margin:18px 0 14px;letter-spacing:-.07em}.hero h1 span,.red{color:var(--red)}.lead{font-size:clamp(18px,2.2vw,24px);line-height:1.42;color:#e9e9e9;max-width:780px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 20px;font-weight:950;text-decoration:none;color:#fff;border:1px solid rgba(230,0,0,.55);background:linear-gradient(135deg,var(--red),var(--red2));box-shadow:0 14px 32px rgba(230,0,0,.22)}.btn.ghost{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.18)}.heroCard{border:1px solid rgba(230,0,0,.45);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(230,0,0,.12));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.heroCard img{width:100%;display:block;border-radius:20px;background:#fff}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.stat{border:1px solid rgba(255,255,255,.13);background:rgba(0,0,0,.28);border-radius:18px;padding:14px;text-align:center}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}
-    section{padding:32px 0}.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.sectionHead h2{font-size:clamp(30px,4vw,54px);line-height:1;margin:0;letter-spacing:-.05em}.sectionHead p{color:var(--muted);max-width:520px;line-height:1.5;margin:0}.grid{display:grid;gap:18px}.cards3{grid-template-columns:repeat(3,1fr)}.card{border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(0,0,0,.48));border-radius:var(--radius);padding:22px;box-shadow:0 18px 48px rgba(0,0,0,.22)}.card.featured{border-color:rgba(230,0,0,.75);background:linear-gradient(145deg,rgba(230,0,0,.9),rgba(120,0,0,.75));box-shadow:0 20px 54px rgba(230,0,0,.24)}.card h3{font-size:32px;margin:0 0 8px;letter-spacing:-.04em}.price{font-size:34px;font-weight:950;margin:12px 0}.price small{display:block;color:#ddd;font-size:15px;margin-top:4px}.card ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}.card li{display:flex;gap:10px;align-items:flex-start;color:#eeeeee}.check{color:#fff;background:var(--red);border-radius:50%;width:21px;height:21px;display:inline-grid;place-items:center;flex:0 0 21px;font-size:13px;font-weight:900}.mediaGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.mediaCard{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.28)}.mediaCard header{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.11);display:flex;justify-content:space-between;gap:14px;align-items:center}.mediaCard h3{margin:0;font-size:19px}.tag{font-size:12px;font-weight:950;color:#fff;border:1px solid rgba(230,0,0,.5);background:rgba(230,0,0,.18);border-radius:999px;padding:7px 10px;white-space:nowrap}.mediaCard a{display:block;background:#111}.mediaCard img{display:block;width:100%;height:auto}.story img{max-height:760px;object-fit:contain;background:#050505}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.textBox{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:var(--radius);padding:22px}.textBox h3{font-size:28px;margin:0 0 10px}.textBox p{color:#e0e0e0;line-height:1.58}.steps{display:grid;gap:12px}.step{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(255,255,255,.11);background:rgba(0,0,0,.3);border-radius:20px;padding:14px}.num{width:34px;height:34px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-weight:950;flex:0 0 34px}.footer{padding:34px 0 48px;text-align:center;color:#aaa}.footer strong{color:white}.langNav{position:sticky;top:0;z-index:4;background:rgba(4,4,4,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12)}.langNav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}.brand{font-weight:950;letter-spacing:.02em}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 11px;background:rgba(255,255,255,.05)}
-    @media(max-width:900px){.hero,.split,.mediaGrid{grid-template-columns:1fr}.cards3{grid-template-columns:1fr}.sectionHead{align-items:flex-start;flex-direction:column}.story img{max-height:none}.navlinks{display:none}.hero{padding-top:28px}.stats{grid-template-columns:1fr}.wrap{width:min(100% - 18px,1180px)}}
+    :root{
+      --bg:#050505;
+      --panel:#101010;
+      --panel2:#171717;
+      --white:#ffffff;
+      --muted:#b8b8b8;
+      --line:rgba(255,255,255,.12);
+      --red:#f20707;
+      --red2:#a90000;
+      --soft:rgba(242,7,7,.12);
+      --radius:26px;
+      --shadow:0 24px 70px rgba(0,0,0,.38),0 0 38px rgba(242,7,7,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--white);
+      background:
+        radial-gradient(circle at 78% 8%,rgba(242,7,7,.25),transparent 30%),
+        radial-gradient(circle at 8% 22%,rgba(255,255,255,.08),transparent 24%),
+        linear-gradient(135deg,#030303 0%,#0a0a0a 45%,#190000 100%);
+      min-height:100vh;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:48px 48px;
+      mask-image:radial-gradient(circle at center,#000,transparent 75%);
+      opacity:.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 34px));margin:0 auto;position:relative;z-index:1}
+    .top{
+      position:sticky;top:0;z-index:5;
+      background:rgba(5,5,5,.74);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+    .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{font-weight:950;letter-spacing:.02em}.brand span{color:var(--red)}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{font-size:13px;font-weight:800;border:1px solid var(--line);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.05)}
+    .nav a:hover{border-color:rgba(242,7,7,.7);background:rgba(242,7,7,.12)}
+
+    .hero{padding:78px 0 48px;display:grid;grid-template-columns:1.04fr .96fr;gap:34px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(242,7,7,.48);background:rgba(242,7,7,.14);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:950;text-transform:uppercase}
+    h1{font-size:clamp(46px,7vw,84px);line-height:.92;margin:20px 0 18px;letter-spacing:-.065em;max-width:760px}
+    h1 span,.red{color:var(--red)}
+    .lead{font-size:clamp(18px,2vw,24px);line-height:1.35;color:#e9e9e9;max-width:720px;margin:0 0 24px;font-weight:700}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border:0;border-radius:999px;padding:15px 20px;font-weight:950;
+      background:linear-gradient(135deg,var(--red),var(--red2));
+      color:white;box-shadow:0 14px 30px rgba(242,7,7,.22);
+    }
+    .btn.dark{background:rgba(255,255,255,.07);border:1px solid var(--line);box-shadow:none}
+    .btn.white{background:white;color:#080808;box-shadow:none}
+    .promise{
+      border:1px solid rgba(242,7,7,.38);
+      border-radius:var(--radius);
+      background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(242,7,7,.10));
+      padding:24px;box-shadow:var(--shadow)
+    }
+    .promise h2{font-size:32px;margin:0 0 12px;letter-spacing:-.04em}.promise p{color:#dfdfdf;line-height:1.6;margin:0 0 18px}
+    .miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.mini{border:1px solid var(--line);background:rgba(0,0,0,.32);border-radius:18px;padding:15px}.mini strong{display:block;font-size:24px;color:var(--red)}.mini span{font-size:13px;color:#d8d8d8;font-weight:800}
+
+    section{padding:38px 0}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}.sectionHead h2{font-size:clamp(34px,4vw,54px);line-height:.95;margin:0;letter-spacing:-.055em}.sectionHead p{margin:0;color:var(--muted);max-width:520px;line-height:1.5;font-weight:650}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}.card.featured{background:linear-gradient(145deg,rgba(242,7,7,.96),rgba(105,0,0,.94));border-color:rgba(255,255,255,.22)}.card.black{background:linear-gradient(145deg,#151515,#050505);border-color:rgba(242,7,7,.45)}.card h3{font-size:32px;margin:0 0 6px}.card .for{font-size:13px;text-transform:uppercase;color:#ddd;font-weight:950;letter-spacing:.05em}.card .big{font-size:22px;font-weight:950;line-height:1.15;margin:8px 0 16px}.card .big span{color:var(--red)}.featured .big span{color:white}.price{border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);padding:18px 0;margin:18px 0;display:grid;gap:4px}.price strong{font-size:38px;letter-spacing:-.04em}.price small{color:#e0e0e0;font-weight:800}.card ul,.plainList{list-style:none;margin:0;padding:0;display:grid;gap:10px}.card li,.plainList li{display:flex;gap:10px;align-items:flex-start;color:#e7e7e7;font-weight:700}.tick{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:white;font-size:13px;flex:0 0 21px}.featured .tick{background:white;color:var(--red)}.tag{position:absolute;right:18px;top:16px;background:white;color:var(--red);border-radius:999px;padding:7px 10px;font-weight:950;font-size:12px}
+
+    .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.96);box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;min-width:860px;color:#111;background:#fff}th,td{padding:13px 14px;border-bottom:1px solid rgba(0,0,0,.09);font-size:14px;text-align:center}th{background:#0b0b0b;color:white;font-size:15px}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th.elite{background:var(--red)}td:first-child{font-weight:900}.yes{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#090909;color:white;font-weight:950}.yes.redDot{background:var(--red)}.no{color:var(--red);font-weight:950;font-size:22px}.basicTxt{font-weight:950}
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:var(--radius);padding:24px}.box h3{font-size:30px;margin:0 0 12px;letter-spacing:-.04em}.box p{color:#e2e2e2;line-height:1.58;margin:0}.promo{border:1px solid rgba(242,7,7,.55);background:linear-gradient(135deg,rgba(242,7,7,.18),rgba(255,255,255,.06));border-radius:var(--radius);padding:28px;text-align:center}.promo h2{font-size:clamp(34px,5vw,62px);line-height:.95;margin:0 0 12px;letter-spacing:-.055em}.promo p{color:#e8e8e8;line-height:1.55;max-width:760px;margin:0 auto 20px;font-size:18px;font-weight:700}.footer{padding:34px 0 50px;text-align:center;color:#aaa}
+
+    @media(max-width:880px){.hero,.cards,.split{grid-template-columns:1fr}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
+    @media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.top .wrap{align-items:flex-start}.brand{font-size:14px}.nav a{font-size:12px;padding:8px 10px}h1{font-size:46px}.lead{font-size:17px}.card{padding:18px}.price strong{font-size:34px}.hero{gap:20px}.promise{padding:20px}}
   </style>
 </head>
 <body>
-  <nav class="langNav"><div class="wrap"><div class="brand">GO <span class="red">VIRAL</span> PORTFOLIO</div><div class="navlinks"><a href="#pt">Português</a><a href="#en">English</a><a href="#artes">Artes</a><a href="index.html">Voltar</a></div></div></nav>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="index.html">GO <span>VIRAL</span> PORTFOLIO</a>
+      <div class="nav">
+        <a href="#pt">Português</a>
+        <a href="#en">English</a>
+        <a href="#recursos-pt">Recursos</a>
+        <a href="index.html">Voltar</a>
+      </div>
+    </div>
+  </nav>
+
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="badge">E-COMMERCE • AUTOMAÇÃO • FIDELIZAÇÃO</span>
-        <h1>Sistemas de vendas online que fazem seu negócio <span>crescer.</span></h1>
-        <p class="lead">Do site profissional ao e-commerce completo com painel, pagamento, pedidos, estoque, login de cliente, bônus, pontos e recompra.</p>
-        <div class="actions"><a class="btn" href="https://wa.me/353877954824" target="_blank" rel="noopener">Quero conversar</a><a class="btn ghost" href="#artes">Ver tabelas e planos</a></div>
+        <span class="badge">E-commerce • automação • vendas recorrentes</span>
+        <h1>Seu negócio pode vender <span>mais</span> mesmo quando você não está online.</h1>
+        <p class="lead">Uma loja profissional passa confiança, organiza pedidos e cria uma experiência que faz o cliente comprar agora e voltar depois.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20contratar%20um%20e-commerce%20Go%20Viral." target="_blank" rel="noopener">Contratar agora</a>
+          <a class="btn dark" href="#pt">Ver planos</a>
+        </div>
       </div>
-      <div class="heroCard"><img src="go-viral-assets/complete-sales-system-wide.png" alt="Go Viral complete e-commerce system"><div class="stats"><div class="stat"><strong>3</strong><span>planos</span></div><div class="stat"><strong>PT/EN</strong><span>conteúdo</span></div><div class="stat"><strong>24/7</strong><span>online</span></div></div></div>
+      <aside class="promise">
+        <h2>Promoção de lançamento</h2>
+        <p>Estou abrindo condições especiais para negócios que querem sair do improviso e vender com uma estrutura mais profissional.</p>
+        <ul class="plainList">
+          <li><span class="tick"></span>Mais confiança para o cliente comprar.</li>
+          <li><span class="tick"></span>Menos pedido perdido no WhatsApp.</li>
+          <li><span class="tick"></span>Mais organização para crescer sem bagunça.</li>
+        </ul>
+        <div class="miniGrid">
+          <div class="mini"><strong>24/7</strong><span>sua loja vendendo online</span></div>
+          <div class="mini"><strong>+controle</strong><span>produtos, pedidos e clientes</span></div>
+        </div>
+      </aside>
     </section>
 
     <section id="pt">
-      <div class="sectionHead"><h2>Conteúdo em <span class="red">Português</span></h2><p>Explicação simples para o cliente entender o que está comprando e por que cada nível tem um valor diferente.</p></div>
-      <div class="grid cards3">
-        <article class="card"><h3>Basic</h3><p>Ideal para quem quer começar a vender online com uma loja profissional.</p><div class="price">R$ 2.000 <small>Setup • R$ 250/mês</small></div><ul><li><span class="check">✓</span>Loja online profissional</li><li><span class="check">✓</span>Produtos e categorias</li><li><span class="check">✓</span>Painel administrativo</li><li><span class="check">✓</span>Checkout básico</li></ul></article>
-        <article class="card featured"><h3>Elite</h3><p>Ideal para organizar vendas, pedidos, pagamento e estoque.</p><div class="price">R$ 45.000 <small>Setup • R$ 3.000/mês</small></div><ul><li><span class="check">✓</span>Tudo do Basic</li><li><span class="check">✓</span>Checkout completo</li><li><span class="check">✓</span>Painel de pedidos</li><li><span class="check">✓</span>Estoque e e-mails automáticos</li></ul></article>
-        <article class="card"><h3>Pro</h3><p>Ideal para automatizar e fazer o cliente voltar para comprar de novo.</p><div class="price">R$ 90.000 <small>Setup • R$ 5.000/mês</small></div><ul><li><span class="check">✓</span>Tudo do Elite</li><li><span class="check">✓</span>Login e perfil do cliente</li><li><span class="check">✓</span>Roleta, pontos e wishlist</li><li><span class="check">✓</span>Avaliações e fidelização</li></ul></article>
+      <div class="sectionHead">
+        <h2>Planos em <span class="red">Português</span></h2>
+        <p>Escolha o nível certo para a fase do seu negócio: começar, organizar ou automatizar.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="for">Ideal para quem quer</div>
+          <h3>Basic</h3>
+          <div class="big"><span>Começar</span><br>a vender online</div>
+          <ul>
+            <li><span class="tick"></span>Loja online profissional</li>
+            <li><span class="tick"></span>Design adaptado ao celular</li>
+            <li><span class="tick"></span>Produtos e categorias</li>
+            <li><span class="tick"></span>Painel administrativo</li>
+            <li><span class="tick"></span>Checkout básico</li>
+          </ul>
+          <div class="price"><small>SETUP</small><strong>R$ 2.000</strong><small>MENSALIDADE • R$ 250/mês</small></div>
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Basic%20Go%20Viral." target="_blank" rel="noopener">Contratar Basic</a>
+        </article>
+        <article class="card featured">
+          <span class="tag">MAIS VENDIDO</span>
+          <div class="for">Ideal para quem quer</div>
+          <h3>Elite</h3>
+          <div class="big">Organizar<br>e escalar vendas</div>
+          <ul>
+            <li><span class="tick"></span>Tudo do Basic</li>
+            <li><span class="tick"></span>Checkout de pagamento completo</li>
+            <li><span class="tick"></span>Cálculo seguro do pedido</li>
+            <li><span class="tick"></span>Painel de pedidos</li>
+            <li><span class="tick"></span>Controle de estoque</li>
+            <li><span class="tick"></span>E-mails automáticos</li>
+          </ul>
+          <div class="price"><small>SETUP</small><strong>R$ 45.000</strong><small>MENSALIDADE • R$ 3.000/mês</small></div>
+          <a class="btn white" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Elite%20Go%20Viral." target="_blank" rel="noopener">Contratar Elite</a>
+        </article>
+        <article class="card black">
+          <div class="for">Ideal para quem quer</div>
+          <h3>Pro</h3>
+          <div class="big"><span>Automatizar</span><br>e fidelizar clientes</div>
+          <ul>
+            <li><span class="tick"></span>Tudo do Elite</li>
+            <li><span class="tick"></span>Login e perfil do cliente</li>
+            <li><span class="tick"></span>Login com Google, e-mail ou SMS</li>
+            <li><span class="tick"></span>Carrinho salvo e wishlist</li>
+            <li><span class="tick"></span>Roleta, pontos e níveis</li>
+            <li><span class="tick"></span>Avaliações de produtos</li>
+          </ul>
+          <div class="price"><small>SETUP</small><strong>R$ 90.000</strong><small>MENSALIDADE • R$ 5.000/mês</small></div>
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Pro%20Go%20Viral." target="_blank" rel="noopener">Contratar Pro</a>
+        </article>
       </div>
     </section>
 
-    <section id="en">
-      <div class="sectionHead"><h2>Content in <span class="red">English</span></h2><p>Simple sales language for clients who need to understand the value of each feature without technical confusion.</p></div>
-      <div class="grid cards3">
-        <article class="card"><h3>Basic</h3><p>For businesses that want to get started selling online.</p><div class="price">€650 <small>Setup • €100/month + €10 domain fee</small></div><ul><li><span class="check">✓</span>Professional online store</li><li><span class="check">✓</span>Products and categories</li><li><span class="check">✓</span>Admin dashboard</li><li><span class="check">✓</span>Basic checkout</li></ul></article>
-        <article class="card featured"><h3>Elite</h3><p>For businesses that want to organize and manage sales.</p><div class="price">€4,500 <small>Setup • €250/month + €10 domain fee</small></div><ul><li><span class="check">✓</span>Everything in Basic</li><li><span class="check">✓</span>Complete payment checkout</li><li><span class="check">✓</span>Order management panel</li><li><span class="check">✓</span>Inventory and automatic emails</li></ul></article>
-        <article class="card"><h3>Pro</h3><p>For businesses that want automation and customer loyalty.</p><div class="price">€12,000 <small>Setup • €600/month + €10 domain fee</small></div><ul><li><span class="check">✓</span>Everything in Elite</li><li><span class="check">✓</span>Customer accounts and profiles</li><li><span class="check">✓</span>Bonus wheel, points and wishlist</li><li><span class="check">✓</span>Reviews and loyalty features</li></ul></article>
+    <section id="recursos-pt">
+      <div class="sectionHead">
+        <h2>Comparativo de <span class="red">recursos</span></h2>
+        <p>Sem termo difícil: aqui a pessoa entende o que cada função entrega na prática.</p>
+      </div>
+      <div class="tableWrap">
+        <table aria-label="Comparativo de recursos em português">
+          <thead><tr><th>Recurso</th><th>Tecnologia por trás</th><th>Basic</th><th class="elite">Elite</th><th>Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Loja online profissional</td><td>HTML, CSS, JavaScript</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Design adaptado ao celular</td><td>Layout responsivo</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Produtos organizados</td><td>Catálogo digital</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Categorias</td><td>Estrutura de categorias</td><td class="basicTxt">8</td><td class="basicTxt red">10</td><td class="basicTxt">12+</td></tr>
+            <tr><td>Painel administrativo</td><td>Dashboard administrativo</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Checkout de pagamento</td><td>PayPal / pagamentos online</td><td class="basicTxt">Básico</td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Cálculo seguro do pedido</td><td>Preço e frete calculados pelo sistema</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Painel de pedidos</td><td>Gestão de pedidos</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Controle de estoque</td><td>Sincronização de estoque</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>E-mails automáticos</td><td>Confirmações automáticas</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Login do cliente</td><td>Sistema de autenticação</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Wishlist, pontos e bônus</td><td>Fidelização e recompra</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Avaliações de produtos</td><td>Prova social</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Hospedagem e publicação</td><td>Servidor em nuvem</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Suporte mensal</td><td>Manutenção e suporte</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
       <div class="split">
-        <div class="textBox"><h3>Como explicar o valor</h3><p>O valor não é só pelo visual do site. O valor está no sistema trabalhando pela empresa: organizar produtos, receber pedidos, controlar estoque, enviar mensagens automáticas e fazer o cliente voltar.</p><div class="steps"><div class="step"><span class="num">1</span><div><strong>Basic</strong><br>Mostra a loja e começa a vender online.</div></div><div class="step"><span class="num">2</span><div><strong>Elite</strong><br>Organiza pedidos, pagamento, estoque e comunicação.</div></div><div class="step"><span class="num">3</span><div><strong>Pro</strong><br>Cria fidelização, bônus, login e recompra.</div></div></div></div>
-        <div class="textBox"><h3>How to explain the value</h3><p>The price is not only about the design. The value is in what the system does for the business: product management, order flow, stock control, automated messages and customer retention.</p><div class="steps"><div class="step"><span class="num">1</span><div><strong>Basic</strong><br>Launches a professional online store.</div></div><div class="step"><span class="num">2</span><div><strong>Elite</strong><br>Manages payments, orders, inventory and emails.</div></div><div class="step"><span class="num">3</span><div><strong>Pro</strong><br>Adds loyalty, customer accounts and repeat sales tools.</div></div></div></div>
+        <div class="box">
+          <h3>Por que isso vende mais?</h3>
+          <p>Quando o cliente entra em uma loja bonita, rápida e organizada, ele sente mais confiança. Quando o pedido é claro, o pagamento é simples e a comunicação é automática, a chance de compra aumenta.</p>
+        </div>
+        <div class="box">
+          <h3>Por que custa mais?</h3>
+          <p>Porque cada plano adiciona mais partes trabalhando sozinhas: pedidos, estoque, cliente, login, bônus e recompra. Quanto mais o sistema trabalha pela empresa, mais valor ele entrega.</p>
+        </div>
       </div>
     </section>
 
-    <section id="artes">
-      <div class="sectionHead"><h2>Artes prontas para <span class="red">divulgação</span></h2><p>Tabelas e cards em português e inglês para usar em propostas, stories e apresentação comercial.</p></div>
-      <div class="mediaGrid">
-        <article class="mediaCard"><header><h3>Planos em inglês — Euro</h3><span class="tag">Wide</span></header><a href="go-viral-assets/pricing-cards-en-euro-wide.png" target="_blank"><img src="go-viral-assets/pricing-cards-en-euro-wide.png" alt="English pricing cards in euros"></a></article>
-        <article class="mediaCard"><header><h3>Planos em português — Real</h3><span class="tag">Stories</span></header><a href="go-viral-assets/pricing-cards-pt-brl-stories.png" target="_blank"><img src="go-viral-assets/pricing-cards-pt-brl-stories.png" alt="Portuguese pricing cards in reais"></a></article>
-        <article class="mediaCard"><header><h3>Tecnologias em português</h3><span class="tag">Wide</span></header><a href="go-viral-assets/technology-table-pt-wide.png" target="_blank"><img src="go-viral-assets/technology-table-pt-wide.png" alt="Portuguese technology table"></a></article>
-        <article class="mediaCard"><header><h3>Technologies in English</h3><span class="tag">Wide</span></header><a href="go-viral-assets/technology-table-en-wide.png" target="_blank"><img src="go-viral-assets/technology-table-en-wide.png" alt="English technology table"></a></article>
-        <article class="mediaCard story"><header><h3>Technology table — Stories</h3><span class="tag">EN</span></header><a href="go-viral-assets/technology-table-en-stories.png" target="_blank"><img src="go-viral-assets/technology-table-en-stories.png" alt="English technology table stories"></a></article>
-        <article class="mediaCard story"><header><h3>Tabela de tecnologia — Stories</h3><span class="tag">PT</span></header><a href="go-viral-assets/technology-table-pt-stories.png" target="_blank"><img src="go-viral-assets/technology-table-pt-stories.png" alt="Portuguese technology table stories"></a></article>
-        <article class="mediaCard"><header><h3>Pacote completo de venda</h3><span class="tag">Overview</span></header><a href="go-viral-assets/complete-sales-system-wide.png" target="_blank"><img src="go-viral-assets/complete-sales-system-wide.png" alt="Complete sales system overview"></a></article>
-        <article class="mediaCard"><header><h3>Comparativo de recursos</h3><span class="tag">PT</span></header><a href="go-viral-assets/features-table-pt-wide.png" target="_blank"><img src="go-viral-assets/features-table-pt-wide.png" alt="Portuguese feature comparison"></a></article>
+    <section id="en">
+      <div class="sectionHead">
+        <h2>Plans in <span class="red">English</span></h2>
+        <p>Clear, simple language for businesses that want a professional online sales system.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="for">Ideal for those who want to</div><h3>Basic</h3><div class="big"><span>Get started</span><br>selling online</div><ul><li><span class="tick"></span>Professional online store</li><li><span class="tick"></span>Mobile responsive design</li><li><span class="tick"></span>Products and categories</li><li><span class="tick"></span>Admin dashboard</li></ul><div class="price"><small>SETUP</small><strong>€650</strong><small>MONTHLY • €100/month + €10 domain fee</small></div><a class="btn" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20hire%20the%20Go%20Viral%20Basic%20plan." target="_blank" rel="noopener">Hire Basic</a></article>
+        <article class="card featured"><span class="tag">MOST POPULAR</span><div class="for">Ideal for those who want to</div><h3>Elite</h3><div class="big">Organize<br>and manage sales</div><ul><li><span class="tick"></span>Everything in Basic</li><li><span class="tick"></span>Complete payment checkout</li><li><span class="tick"></span>Secure order calculation</li><li><span class="tick"></span>Order panel and inventory</li></ul><div class="price"><small>SETUP</small><strong>€4,500</strong><small>MONTHLY • €250/month + €10 domain fee</small></div><a class="btn white" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20hire%20the%20Go%20Viral%20Elite%20plan." target="_blank" rel="noopener">Hire Elite</a></article>
+        <article class="card black"><div class="for">Ideal for those who want to</div><h3>Pro</h3><div class="big"><span>Automate</span><br>and build loyalty</div><ul><li><span class="tick"></span>Everything in Elite</li><li><span class="tick"></span>Customer accounts and profile</li><li><span class="tick"></span>Saved cart and wishlist</li><li><span class="tick"></span>Bonus wheel, points and reviews</li></ul><div class="price"><small>SETUP</small><strong>€12,000</strong><small>MONTHLY • €600/month + €10 domain fee</small></div><a class="btn" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20hire%20the%20Go%20Viral%20Pro%20plan." target="_blank" rel="noopener">Hire Pro</a></article>
+      </div>
+    </section>
+
+    <section id="recursos-en">
+      <div class="sectionHead">
+        <h2>Features <span class="red">comparison</span></h2>
+        <p>The value is easy to understand: each level adds more control, automation and customer retention.</p>
+      </div>
+      <div class="tableWrap">
+        <table aria-label="Features comparison in English">
+          <thead><tr><th>Feature</th><th>Technology behind it</th><th>Basic</th><th class="elite">Elite</th><th>Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Professional online store</td><td>HTML, CSS, JavaScript</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Mobile responsive design</td><td>Responsive layout</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Organized products</td><td>Digital catalog</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Categories</td><td>Category structure</td><td class="basicTxt">8</td><td class="basicTxt red">10</td><td class="basicTxt">12+</td></tr>
+            <tr><td>Admin dashboard</td><td>Store management</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Payment checkout</td><td>PayPal / online payments</td><td class="basicTxt">Basic</td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Secure order calculation</td><td>Price and shipping calculation</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Order management panel</td><td>Order management</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Inventory control</td><td>Inventory synchronization</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Automatic emails</td><td>Automated confirmations</td><td><span class="no">×</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Customer login</td><td>Authentication system</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Wishlist, points and bonuses</td><td>Loyalty and repeat sales</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Product reviews</td><td>Social proof</td><td><span class="no">×</span></td><td><span class="no">×</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Hosting & publishing</td><td>Cloud server</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Monthly support</td><td>Maintenance and support</td><td><span class="yes">✓</span></td><td><span class="yes redDot">✓</span></td><td><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="promo">
+        <h2>Pronto para vender com mais estrutura?</h2>
+        <p>O próximo passo é simples: me chama, eu entendo seu negócio e te indico o plano certo sem complicar.</p>
+        <div class="actions" style="justify-content:center">
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20um%20e-commerce%20Go%20Viral." target="_blank" rel="noopener">Contratar agora</a>
+          <a class="btn dark" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20talk%20about%20a%20Go%20Viral%20e-commerce%20project." target="_blank" rel="noopener">Hire now</a>
+        </div>
       </div>
     </section>
   </main>
+
   <footer class="footer"><strong>Go Viral</strong> — sistemas de vendas online para negócios que querem crescer.</footer>
 </body>
 </html>
