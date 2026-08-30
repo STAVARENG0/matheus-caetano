@@ -151,7 +151,11 @@
     .plainList li,.card li{justify-content:center;text-align:center}.tick{background:var(--red)}
     .sectionHead{align-items:center;flex-direction:column;text-align:center}.sectionHead p{max-width:720px}
     .solutionItem{text-align:center}.solutionItem .icon{margin-left:auto;margin-right:auto;background:var(--red)}
-    .projectTabs{justify-content:center}.projectTab img{object-fit:contain;padding:7px;background:#050505;border-color:rgba(255,255,255,.16)}.projectTab:hover img,.projectTab.active img{border-color:var(--red);box-shadow:0 0 0 5px rgba(255,24,53,.08),0 16px 34px rgba(0,0,0,.4)}
+    .projectTabs{justify-content:center}.projectTab img{box-sizing:border-box;object-fit:cover;padding:0;background:transparent;border-color:rgba(255,255,255,.16)}
+    .projectTab[data-project="brazilian"] img{background:#fff;object-fit:contain;padding:3px}
+    .projectTab[data-project="marluy"] img{object-fit:contain;background:#000;padding:5px 1px}
+    .projectTab[data-project="craic"] img{object-position:50% 50%}
+    .projectTab:hover img,.projectTab.active img{transform:translateY(-5px);border-color:var(--red);box-shadow:0 0 0 5px rgba(255,24,53,.08),0 16px 34px rgba(0,0,0,.4)}
     .projectTab:focus{outline:none}.projectTab:focus-visible img{outline:2px solid var(--red);outline-offset:5px}
     .projectStage{text-align:center}.projectInfo{text-align:center}.featureChips{justify-content:center}.featureChips span{border-color:rgba(255,24,53,.32);background:rgba(255,24,53,.07)}
     .projectVisual{background:rgba(255,255,255,.018);border-color:rgba(255,255,255,.08)}.galleryControl{background:rgba(0,0,0,.78);border-color:rgba(255,255,255,.38)}
@@ -214,12 +218,13 @@
       <div class="showcase">
         <div class="projectTabs" role="tablist" aria-label="Projetos Go Viral">
           <button class="projectTab active" type="button" data-project="brazilian"><img src="assets/portfolio/logo-brazilian-day.png" alt="Logo Brazilian Day Gort"><span>Brazilian Day</span></button>
-          <button class="projectTab" type="button" data-project="craic"><img src="assets/portfolio/logo-craic-barber.png" alt="Logo Craic Barber Shop"><span>Craic Barber</span></button>
+          <button class="projectTab" type="button" data-project="craic"><img src="assets/portfolio/logo-craic-barber-selector.png" alt="Logo Craic Barber Shop"><span>Craic Barber</span></button>
           <button class="projectTab" type="button" data-project="nextride"><img src="assets/portfolio/logo-nextride.jpg" alt="Logo NextRide"><span>NextRide</span></button>
-          <button class="projectTab" type="button" data-project="marluy"><img src="assets/portfolio/logo-marluy.png" alt="Logo Marluy Lavecchia"><span>Marluy Lavecchia</span></button>
+          <button class="projectTab" type="button" data-project="marluy"><img src="assets/portfolio/logo-marluy-oficial.png" alt="Logo Marluy Lavecchia"><span>Marluy Lavecchia</span></button>
           <button class="projectTab" type="button" data-project="faella"><img src="assets/portfolio/logo-faella.png" alt="Logo Faella Crafts"><span>Faella Crafts</span></button>
           <button class="projectTab" type="button" data-project="hs"><img src="assets/portfolio/logo-hs-nutrition.png" alt="Logo HS Nutrition"><span>HS Nutrition</span></button>
-          <button class="projectTab" type="button" data-project="caetano"><img src="assets/portfolio/caetano-02.png" alt="Projeto Caetano.exe"><span>Caetano.exe</span></button>
+          <button class="projectTab" type="button" data-project="vintage"><img src="assets/portfolio/logo-vintage-oficial.png" alt="Logo Vintage Clothes Shop"><span>Vintage</span></button>
+          <button class="projectTab" type="button" data-project="caetano"><img src="assets/portfolio/logo-caetano-instagram.png" alt="Projeto Caetano.exe"><span>Caetano.exe</span></button>
         </div>
         <div class="projectStage">
           <div class="projectVisual">
@@ -462,6 +467,13 @@
           description:{pt:'Vitrine profissional de suplementos com detalhes de produto, carrinho, checkout e gestão de estoque.',en:'A professional supplement storefront with product details, cart, checkout and inventory management.'},
           features:{pt:['Produtos','Categorias','Checkout','Gestão de estoque'],en:['Products','Categories','Checkout','Inventory management']},
           images:['assets/portfolio/hs-01.png','assets/portfolio/hs-02.png','assets/portfolio/hs-08.png']
+        },
+        vintage: {
+          title:'Vintage Clothes Shop',
+          type:{pt:'E-commerce de moda',en:'Fashion e-commerce'},
+          description:{pt:'Loja de moda com identidade própria, catálogo responsivo, carrinho, área do cliente, fidelização e gestão administrativa.',en:'A fashion store with its own identity, responsive catalogue, cart, customer area, loyalty features and admin management.'},
+          features:{pt:['Catálogo responsivo','Carrinho','Área do cliente','Painel administrativo'],en:['Responsive catalogue','Shopping cart','Customer area','Admin dashboard']},
+          images:['assets/portfolio/vintage-01.png','assets/portfolio/vintage-03.png','assets/portfolio/vintage-15.png']
         },
         caetano: {
           title:'Caetano.exe',
