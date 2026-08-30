@@ -134,6 +134,32 @@
 
     @media(max-width:880px){.hero,.cards,.split,.solutionGrid,.steps,.projectStage{grid-template-columns:1fr}.casesGrid{grid-template-columns:1fr}.projectVisual{min-height:420px}.projectVisual img{max-height:420px}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
     @media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.top .wrap{align-items:flex-start}.brand{font-size:14px}.nav a{font-size:12px;padding:8px 10px}.projectTabs{gap:8px}.projectTab{width:78px;min-height:102px}.projectTab img{width:64px;height:64px}h1{font-size:46px}.lead{font-size:17px}.card{padding:18px}.price strong{font-size:34px}.hero{gap:20px}.promise{padding:20px}}
+
+    /* Direção visual: futurista, minimalista, centralizada e translúcida */
+    :root{--bg:#050505;--panel:#0b0b0d;--panel2:#121216;--red:#ff1835;--red2:#8b0015;--soft:rgba(255,24,53,.11);--green:#ff1835;--blue:#fff;--shadow:0 24px 70px rgba(0,0,0,.34),0 0 30px rgba(255,24,53,.09)}
+    body{font-family:"Arial Narrow",Inter,Arial,sans-serif;text-align:center;text-transform:uppercase;letter-spacing:.025em;background:radial-gradient(circle at 50% 0,rgba(255,24,53,.13),transparent 34%),#050505}
+    body:before{opacity:.12;background-size:64px 64px}
+    .top{background:rgba(5,5,6,.66);border-color:rgba(255,255,255,.1)}
+    .top .wrap{justify-content:center;flex-wrap:wrap}
+    .brand span,.red,h1 span{color:var(--red)}
+    .nav{justify-content:center}.nav a{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.1)}.nav a:hover{border-color:rgba(255,24,53,.75);background:rgba(255,24,53,.1)}
+    .langSwitch{border-color:rgba(255,24,53,.35);background:rgba(255,255,255,.025)}.langBtn.active{background:var(--red);color:#fff;box-shadow:none}
+    .hero{text-align:center}.hero>div{display:flex;flex-direction:column;align-items:center}.lead,.promise p,.sectionHead p,.projectInfo p,.box p,.promo p{margin-left:auto;margin-right:auto}
+    .badge{border-color:rgba(255,24,53,.42);background:rgba(255,24,53,.08)}
+    .actions{justify-content:center}.btn{background:var(--red);box-shadow:0 12px 28px rgba(255,24,53,.16)}.btn.dark{background:rgba(255,255,255,.025)}
+    .promise,.showcase,.solutionItem,.box,.card,.promo{background:rgba(255,255,255,.025);border-color:rgba(255,255,255,.1);backdrop-filter:blur(16px)}
+    .plainList li,.card li{justify-content:center;text-align:center}.tick{background:var(--red)}
+    .sectionHead{align-items:center;flex-direction:column;text-align:center}.sectionHead p{max-width:720px}
+    .solutionItem{text-align:center}.solutionItem .icon{margin-left:auto;margin-right:auto;background:var(--red)}
+    .projectTabs{justify-content:center}.projectTab img{object-fit:contain;padding:7px;background:#050505;border-color:rgba(255,255,255,.16)}.projectTab:hover img,.projectTab.active img{border-color:var(--red);box-shadow:0 0 0 5px rgba(255,24,53,.08),0 16px 34px rgba(0,0,0,.4)}
+    .projectTab:focus{outline:none}.projectTab:focus-visible img{outline:2px solid var(--red);outline-offset:5px}
+    .projectStage{text-align:center}.projectInfo{text-align:center}.featureChips{justify-content:center}.featureChips span{border-color:rgba(255,24,53,.32);background:rgba(255,24,53,.07)}
+    .projectVisual{background:rgba(255,255,255,.018);border-color:rgba(255,255,255,.08)}.galleryControl{background:rgba(0,0,0,.78);border-color:rgba(255,255,255,.38)}
+    .cards,.split,.steps{text-align:center}.card.featured{background:rgba(255,24,53,.12);border-color:rgba(255,24,53,.45)}.card.black{background:rgba(255,255,255,.018);border-color:rgba(255,255,255,.12)}.featured .tick{color:var(--red)}.tag{color:var(--red)}
+    .promo{background:rgba(255,255,255,.02);border-color:rgba(255,24,53,.3)}.launchTag{background:rgba(255,24,53,.1);border-color:rgba(255,24,53,.42);color:#ff8798}
+    .footer{text-align:center}
+    @media(max-width:880px){.top .wrap{align-items:center}.sectionHead{align-items:center}.hero{text-align:center}.nav a:nth-child(4){display:inline-flex!important;color:#fff;border-color:rgba(255,24,53,.42)}}
+    @media(max-width:560px){.top .wrap{align-items:center}.brand{width:100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -187,10 +213,12 @@
       </div>
       <div class="showcase">
         <div class="projectTabs" role="tablist" aria-label="Projetos Go Viral">
-          <button class="projectTab active" type="button" data-project="brazilian"><img src="assets/portfolio/brazilian-day-cover.png" alt="Logo Brazilian Day Gort"><span>Brazilian Day</span></button>
-          <button class="projectTab" type="button" data-project="craic"><img src="assets/portfolio/craic-barber-cover.png" alt="Logo Craic Barber Shop"><span>Craic Barber</span></button>
-          <button class="projectTab" type="button" data-project="nextride"><img src="assets/portfolio/nextride-01.png" alt="Logo NextRide"><span>NextRide</span></button>
-          <button class="projectTab" type="button" data-project="marluy"><img src="assets/portfolio/marluy-01.png" alt="Logo Marluy Lavecchia"><span>Marluy Lavecchia</span></button>
+          <button class="projectTab active" type="button" data-project="brazilian"><img src="assets/portfolio/logo-brazilian-day.png" alt="Logo Brazilian Day Gort"><span>Brazilian Day</span></button>
+          <button class="projectTab" type="button" data-project="craic"><img src="assets/portfolio/logo-craic-barber.png" alt="Logo Craic Barber Shop"><span>Craic Barber</span></button>
+          <button class="projectTab" type="button" data-project="nextride"><img src="assets/portfolio/logo-nextride.jpg" alt="Logo NextRide"><span>NextRide</span></button>
+          <button class="projectTab" type="button" data-project="marluy"><img src="assets/portfolio/logo-marluy.png" alt="Logo Marluy Lavecchia"><span>Marluy Lavecchia</span></button>
+          <button class="projectTab" type="button" data-project="faella"><img src="assets/portfolio/logo-faella.png" alt="Logo Faella Crafts"><span>Faella Crafts</span></button>
+          <button class="projectTab" type="button" data-project="hs"><img src="assets/portfolio/logo-hs-nutrition.png" alt="Logo HS Nutrition"><span>HS Nutrition</span></button>
           <button class="projectTab" type="button" data-project="caetano"><img src="assets/portfolio/caetano-02.png" alt="Projeto Caetano.exe"><span>Caetano.exe</span></button>
         </div>
         <div class="projectStage">
@@ -420,6 +448,20 @@
           description:{pt:'Ecossistema de páginas para ofertas, eventos, redes sociais e formulários de captação qualificada.',en:'A page ecosystem for offers, events, social traffic and qualified lead capture forms.'},
           features:{pt:['Múltiplas ofertas','Eventos','Formulários','Captação de leads'],en:['Multiple offers','Events','Forms','Lead capture']},
           images:['assets/portfolio/marluy-01.png','assets/portfolio/marluy-06.png']
+        },
+        faella: {
+          title:'Faella Crafts',
+          type:{pt:'E-commerce personalizado',en:'Custom e-commerce'},
+          description:{pt:'Loja online criada para valorizar a identidade artesanal da marca, com catálogo, carrinho, campanhas e administração.',en:'An online store built around the brand’s handmade identity, with catalogue, cart, campaigns and administration.'},
+          features:{pt:['Catálogo de produtos','Carrinho','Campanhas','Painel administrativo'],en:['Product catalogue','Shopping cart','Campaigns','Admin dashboard']},
+          images:['assets/portfolio/faella-01.png','assets/portfolio/faella-02.png','assets/portfolio/faella-11.png']
+        },
+        hs: {
+          title:'HS Nutrition',
+          type:{pt:'E-commerce de suplementos',en:'Supplement e-commerce'},
+          description:{pt:'Vitrine profissional de suplementos com detalhes de produto, carrinho, checkout e gestão de estoque.',en:'A professional supplement storefront with product details, cart, checkout and inventory management.'},
+          features:{pt:['Produtos','Categorias','Checkout','Gestão de estoque'],en:['Products','Categories','Checkout','Inventory management']},
+          images:['assets/portfolio/hs-01.png','assets/portfolio/hs-02.png','assets/portfolio/hs-08.png']
         },
         caetano: {
           title:'Caetano.exe',
