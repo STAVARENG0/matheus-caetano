@@ -14,17 +14,19 @@
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root{
-      --bg:#050505;
-      --panel:#101010;
-      --panel2:#171717;
+      --bg:#06111f;
+      --panel:#0b1b2d;
+      --panel2:#102740;
       --white:#ffffff;
       --muted:#b8b8b8;
       --line:rgba(255,255,255,.12);
-      --red:#f20707;
-      --red2:#a90000;
-      --soft:rgba(242,7,7,.12);
+      --red:#e2b93f;
+      --red2:#8f6b08;
+      --soft:rgba(226,185,63,.13);
+      --green:#18a26b;
+      --blue:#2477d4;
       --radius:26px;
-      --shadow:0 24px 70px rgba(0,0,0,.38),0 0 38px rgba(242,7,7,.10);
+      --shadow:0 24px 70px rgba(0,0,0,.38),0 0 38px rgba(36,119,212,.13);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -33,9 +35,9 @@
       font-family:Inter,Arial,Helvetica,sans-serif;
       color:var(--white);
       background:
-        radial-gradient(circle at 78% 8%,rgba(242,7,7,.25),transparent 30%),
-        radial-gradient(circle at 8% 22%,rgba(255,255,255,.08),transparent 24%),
-        linear-gradient(135deg,#030303 0%,#0a0a0a 45%,#190000 100%);
+        radial-gradient(circle at 78% 8%,rgba(36,119,212,.23),transparent 30%),
+        radial-gradient(circle at 8% 22%,rgba(24,162,107,.15),transparent 24%),
+        linear-gradient(135deg,#04101d 0%,#071726 48%,#0b2432 100%);
       min-height:100vh;
     }
     body:before{
@@ -52,7 +54,7 @@
     .wrap{width:min(1120px,calc(100% - 34px));margin:0 auto;position:relative;z-index:1}
     .top{
       position:sticky;top:0;z-index:5;
-      background:rgba(5,5,5,.74);
+      background:rgba(4,16,29,.82);
       backdrop-filter:blur(16px);
       border-bottom:1px solid var(--line);
     }
@@ -60,10 +62,16 @@
     .brand{font-weight:950;letter-spacing:.02em}.brand span{color:var(--red)}
     .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .nav a{font-size:13px;font-weight:800;border:1px solid var(--line);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.05)}
-    .nav a:hover{border-color:rgba(242,7,7,.7);background:rgba(242,7,7,.12)}
+    .nav a:hover{border-color:rgba(226,185,63,.75);background:rgba(226,185,63,.12)}
+    .langSwitch{display:flex;align-items:center;gap:4px;padding:4px;border:1px solid rgba(226,185,63,.38);border-radius:999px;background:rgba(255,255,255,.055)}
+    .langBtn{border:0;background:transparent;color:#b9c8d7;border-radius:999px;padding:7px 10px;cursor:pointer;font-weight:900;font-size:12px;display:flex;align-items:center;gap:6px}
+    .langBtn.active{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+    .flag{width:22px;height:15px;display:inline-block;border-radius:3px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+    .flagBrazil{background:#169b62}.flagBrazil:before{content:"";position:absolute;width:11px;height:11px;background:#ffdf37;transform:rotate(45deg);left:5.5px;top:2px}.flagBrazil:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#1d4f9c;left:8px;top:4.5px}
+    .flagIreland{background:linear-gradient(90deg,#169b62 0 33.33%,#fff 33.33% 66.66%,#ff883e 66.66%)}
 
     .hero{padding:78px 0 48px;display:grid;grid-template-columns:1.04fr .96fr;gap:34px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(242,7,7,.48);background:rgba(242,7,7,.14);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:950;text-transform:uppercase}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(226,185,63,.48);background:rgba(226,185,63,.12);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:950;text-transform:uppercase}
     h1{font-size:clamp(46px,7vw,84px);line-height:.92;margin:20px 0 18px;letter-spacing:-.065em;max-width:760px}
     h1 span,.red{color:var(--red)}
     .lead{font-size:clamp(18px,2vw,24px);line-height:1.35;color:#e9e9e9;max-width:720px;margin:0 0 24px;font-weight:700}
@@ -72,30 +80,30 @@
       display:inline-flex;align-items:center;justify-content:center;gap:9px;
       border:0;border-radius:999px;padding:15px 20px;font-weight:950;
       background:linear-gradient(135deg,var(--red),var(--red2));
-      color:white;box-shadow:0 14px 30px rgba(242,7,7,.22);
+      color:white;box-shadow:0 14px 30px rgba(226,185,63,.2);
     }
     .btn.dark{background:rgba(255,255,255,.07);border:1px solid var(--line);box-shadow:none}
     .btn.white{background:white;color:#080808;box-shadow:none}
     .promise{
-      border:1px solid rgba(242,7,7,.38);
+      border:1px solid rgba(226,185,63,.38);
       border-radius:var(--radius);
-      background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(242,7,7,.10));
+      background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(36,119,212,.12));
       padding:24px;box-shadow:var(--shadow)
     }
     .promise h2{font-size:32px;margin:0 0 12px;letter-spacing:-.04em}.promise p{color:#dfdfdf;line-height:1.6;margin:0 0 18px}
     .miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.mini{border:1px solid var(--line);background:rgba(0,0,0,.32);border-radius:18px;padding:15px}.mini strong{display:block;font-size:24px;color:var(--red)}.mini span{font-size:13px;color:#d8d8d8;font-weight:800}
 
     section{padding:38px 0}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}.sectionHead h2{font-size:clamp(34px,4vw,54px);line-height:.95;margin:0;letter-spacing:-.055em}.sectionHead p{margin:0;color:var(--muted);max-width:520px;line-height:1.5;font-weight:650}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}.card.featured{background:linear-gradient(145deg,rgba(242,7,7,.96),rgba(105,0,0,.94));border-color:rgba(255,255,255,.22)}.card.black{background:linear-gradient(145deg,#151515,#050505);border-color:rgba(242,7,7,.45)}.card h3{font-size:32px;margin:0 0 6px}.card .for{font-size:13px;text-transform:uppercase;color:#ddd;font-weight:950;letter-spacing:.05em}.card .big{font-size:22px;font-weight:950;line-height:1.15;margin:8px 0 16px}.card .big span{color:var(--red)}.featured .big span{color:white}.price{border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);padding:18px 0;margin:18px 0;display:grid;gap:4px}.price strong{font-size:38px;letter-spacing:-.04em}.price small{color:#e0e0e0;font-weight:800}.card ul,.plainList{list-style:none;margin:0;padding:0;display:grid;gap:10px}.card li,.plainList li{display:flex;gap:10px;align-items:flex-start;color:#e7e7e7;font-weight:700}.tick{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:white;font-size:13px;flex:0 0 21px}.featured .tick{background:white;color:var(--red)}.tag{position:absolute;right:18px;top:16px;background:white;color:var(--red);border-radius:999px;padding:7px 10px;font-weight:950;font-size:12px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}.card.featured{background:linear-gradient(145deg,rgba(24,162,107,.96),rgba(8,70,76,.94));border-color:rgba(255,255,255,.22)}.card.black{background:linear-gradient(145deg,#102740,#06111f);border-color:rgba(226,185,63,.45)}.card h3{font-size:32px;margin:0 0 6px}.card .for{font-size:13px;text-transform:uppercase;color:#ddd;font-weight:950;letter-spacing:.05em}.card .big{font-size:22px;font-weight:950;line-height:1.15;margin:8px 0 16px}.card .big span{color:var(--red)}.featured .big span{color:white}.price{border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);padding:18px 0;margin:18px 0;display:grid;gap:4px}.price strong{font-size:38px;letter-spacing:-.04em}.price small{color:#e0e0e0;font-weight:800}.card ul,.plainList{list-style:none;margin:0;padding:0;display:grid;gap:10px}.card li,.plainList li{display:flex;gap:10px;align-items:flex-start;color:#e7e7e7;font-weight:700}.tick{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-size:13px;flex:0 0 21px}.featured .tick{background:white;color:var(--green)}.tag{position:absolute;right:18px;top:16px;background:white;color:var(--green);border-radius:999px;padding:7px 10px;font-weight:950;font-size:12px}
 
     .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.96);box-shadow:var(--shadow)}
     table{width:100%;border-collapse:collapse;min-width:860px;color:#111;background:#fff}th,td{padding:13px 14px;border-bottom:1px solid rgba(0,0,0,.09);font-size:14px;text-align:center}th{background:#0b0b0b;color:white;font-size:15px}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th.elite{background:var(--red)}td:first-child{font-weight:900}.yes{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#090909;color:white;font-weight:950}.yes.redDot{background:var(--red)}.no{color:var(--red);font-weight:950;font-size:22px}.basicTxt{font-weight:950}
 
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:var(--radius);padding:24px}.box h3{font-size:30px;margin:0 0 12px;letter-spacing:-.04em}.box p{color:#e2e2e2;line-height:1.58;margin:0}.promo{border:1px solid rgba(242,7,7,.55);background:linear-gradient(135deg,rgba(242,7,7,.18),rgba(255,255,255,.06));border-radius:var(--radius);padding:28px;text-align:center}.promo h2{font-size:clamp(34px,5vw,62px);line-height:.95;margin:0 0 12px;letter-spacing:-.055em}.promo p{color:#e8e8e8;line-height:1.55;max-width:760px;margin:0 auto 20px;font-size:18px;font-weight:700}.footer{padding:34px 0 50px;text-align:center;color:#aaa}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:var(--radius);padding:24px}.box h3{font-size:30px;margin:0 0 12px;letter-spacing:-.04em}.box p{color:#e2e2e2;line-height:1.58;margin:0}.promo{border:1px solid rgba(226,185,63,.5);background:linear-gradient(135deg,rgba(24,162,107,.15),rgba(36,119,212,.12));border-radius:var(--radius);padding:28px;text-align:center}.promo h2{font-size:clamp(34px,5vw,62px);line-height:.95;margin:0 0 12px;letter-spacing:-.055em}.promo p{color:#e8e8e8;line-height:1.55;max-width:760px;margin:0 auto 20px;font-size:18px;font-weight:700}.footer{padding:34px 0 50px;text-align:center;color:#aaa}
 
     .solutionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .solutionItem{border:1px solid rgba(242,7,7,.28);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(242,7,7,.055));border-radius:22px;padding:22px;min-height:180px}
-    .solutionItem .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--red),var(--red2));font-size:20px;font-weight:950;margin-bottom:18px}
+    .solutionItem{border:1px solid rgba(226,185,63,.25);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(36,119,212,.055));border-radius:22px;padding:22px;min-height:180px}
+    .solutionItem .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--blue));font-size:20px;font-weight:950;margin-bottom:18px}
     .solutionItem h3{font-size:24px;margin:0 0 9px;letter-spacing:-.03em}
     .solutionItem p{margin:0;color:#d0d0d0;line-height:1.55;font-weight:650}
     .casesGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -107,7 +115,19 @@
     .step:before{content:counter(steps);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--red);font-weight:950;margin-bottom:14px}
     .trust{margin:18px auto 0;max-width:780px;text-align:center;color:#999;font-size:13px;line-height:1.55}
 
-    @media(max-width:880px){.hero,.cards,.split,.solutionGrid,.steps{grid-template-columns:1fr}.casesGrid{grid-template-columns:1fr}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
+    .showcase{border:1px solid rgba(226,185,63,.28);border-radius:30px;background:rgba(5,18,31,.72);padding:18px;box-shadow:var(--shadow)}
+    .projectTabs{display:flex;gap:8px;overflow:auto;padding:2px 2px 14px;scrollbar-width:thin}
+    .projectTab{white-space:nowrap;border:1px solid var(--line);background:rgba(255,255,255,.055);color:#d8e2ec;padding:11px 15px;border-radius:999px;font-weight:900;cursor:pointer}
+    .projectTab.active{border-color:var(--red);background:linear-gradient(135deg,rgba(226,185,63,.22),rgba(24,162,107,.18));color:#fff}
+    .projectStage{display:grid;grid-template-columns:minmax(0,.88fr) minmax(280px,1.12fr);gap:22px;align-items:center}
+    .projectVisual{position:relative;min-height:560px;display:grid;place-items:center;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,#edf2f5,#dce8ef)}
+    .projectVisual img{display:block;max-height:560px;max-width:100%;object-fit:contain;filter:drop-shadow(0 18px 28px rgba(0,0,0,.2))}
+    .galleryControl{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(4,16,29,.78);color:#fff;font-size:22px;cursor:pointer}.galleryControl.prev{left:12px}.galleryControl.next{right:12px}
+    .projectInfo{padding:16px 10px}.projectKicker{color:var(--red);font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}.projectInfo h3{font-size:clamp(34px,4vw,56px);line-height:.95;letter-spacing:-.05em;margin:12px 0}.projectInfo p{color:#ced8e1;line-height:1.65;font-size:17px}.featureChips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.featureChips span{border:1px solid rgba(226,185,63,.3);background:rgba(226,185,63,.08);padding:8px 11px;border-radius:999px;font-size:12px;font-weight:850}.slideCounter{color:#91a3b5;font-weight:900;font-size:13px}
+    .priceOld{text-decoration:line-through;color:#aab4bf;font-size:20px;font-weight:800}.launchTag{display:inline-flex;margin:8px 0 2px;padding:7px 10px;border-radius:999px;background:rgba(24,162,107,.18);border:1px solid rgba(24,162,107,.48);color:#8ff0c5;font-size:12px;font-weight:950;text-transform:uppercase}
+    [hidden]{display:none!important}
+
+    @media(max-width:880px){.hero,.cards,.split,.solutionGrid,.steps,.projectStage{grid-template-columns:1fr}.casesGrid{grid-template-columns:1fr}.projectVisual{min-height:420px}.projectVisual img{max-height:420px}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
     @media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.top .wrap{align-items:flex-start}.brand{font-size:14px}.nav a{font-size:12px;padding:8px 10px}h1{font-size:46px}.lead{font-size:17px}.card{padding:18px}.price strong{font-size:34px}.hero{gap:20px}.promise{padding:20px}}
   </style>
 </head>
@@ -116,10 +136,14 @@
     <div class="wrap">
       <a class="brand" href="index.html">GO <span>VIRAL</span> PORTFOLIO</a>
       <div class="nav">
-        <a href="#solucoes">Soluções</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#pt">Planos</a>
-        <a href="index.html">Voltar</a>
+        <a href="#portfolio-interativo" data-pt="Projetos" data-en="Projects">Projetos</a>
+        <a href="#solucoes" data-pt="Soluções" data-en="Solutions">Soluções</a>
+        <a href="#pt" data-plan-link data-pt="Planos" data-en="Plans">Planos</a>
+        <a href="index.html" data-pt="Voltar" data-en="Back">Voltar</a>
+      </div>
+      <div class="langSwitch" role="group" aria-label="Selecionar idioma">
+        <button class="langBtn active" type="button" data-lang="pt"><span class="flag flagBrazil" aria-hidden="true"></span> PT</button>
+        <button class="langBtn" type="button" data-lang="en"><span class="flag flagIreland" aria-hidden="true"></span> EN</button>
       </div>
     </div>
   </nav>
@@ -127,27 +151,58 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="badge">E-commerce • automação • vendas recorrentes</span>
-        <h1>Seu negócio pode vender <span>mais</span> mesmo quando você não está online.</h1>
-        <p class="lead">Uma loja profissional passa confiança, organiza pedidos e cria uma experiência que faz o cliente comprar agora e voltar depois.</p>
+        <span class="badge" data-pt="Sistemas • automação • crescimento" data-en="Systems • automation • growth">Sistemas • automação • crescimento</span>
+        <h1 data-html-pt="Tecnologia para seu negócio crescer com <span>estrutura.</span>" data-html-en="Technology built to help your business grow with <span>structure.</span>">Tecnologia para seu negócio crescer com <span>estrutura.</span></h1>
+        <p class="lead" data-pt="Conheça projetos reais, explore as funcionalidades e descubra qual sistema pode transformar sua operação." data-en="Explore real projects, interact with their features and discover which system can transform your operation.">Conheça projetos reais, explore as funcionalidades e descubra qual sistema pode transformar sua operação.</p>
         <div class="actions">
-          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20do%20e-commerce%20Go%20Viral." target="_blank" rel="noopener">Solicitar demonstração</a>
-          <a class="btn dark" href="#pt">Ver planos</a>
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20da%20Go%20Viral." target="_blank" rel="noopener" data-pt="Solicitar demonstração" data-en="Request a demo">Solicitar demonstração</a>
+          <a class="btn dark" href="#portfolio-interativo" data-pt="Explorar projetos" data-en="Explore projects">Explorar projetos</a>
         </div>
       </div>
       <aside class="promise">
-        <h2>Promoção de lançamento</h2>
-        <p>Estou abrindo condições especiais para negócios que querem sair do improviso e vender com uma estrutura mais profissional.</p>
+        <h2 data-pt="Projetos que você pode explorar" data-en="Projects you can explore">Projetos que você pode explorar</h2>
+        <p data-pt="Veja por dentro como funcionam vitrines, agendas, eventos e sistemas desenvolvidos pela Go Viral." data-en="See how storefronts, bookings, events and custom systems developed by Go Viral work from the inside.">Veja por dentro como funcionam vitrines, agendas, eventos e sistemas desenvolvidos pela Go Viral.</p>
         <ul class="plainList">
-          <li><span class="tick"></span>Mais confiança para o cliente comprar.</li>
-          <li><span class="tick"></span>Menos pedido perdido no WhatsApp.</li>
-          <li><span class="tick"></span>Mais organização para crescer sem bagunça.</li>
+          <li><span class="tick"></span><span data-pt="Mais confiança para o cliente comprar." data-en="More confidence for customers to buy.">Mais confiança para o cliente comprar.</span></li>
+          <li><span class="tick"></span><span data-pt="Menos pedidos perdidos no WhatsApp." data-en="Fewer orders lost in WhatsApp conversations.">Menos pedidos perdidos no WhatsApp.</span></li>
+          <li><span class="tick"></span><span data-pt="Mais organização para crescer sem bagunça." data-en="More organisation to grow without chaos.">Mais organização para crescer sem bagunça.</span></li>
         </ul>
         <div class="miniGrid">
-          <div class="mini"><strong>Enquanto você dorme</strong><span>sua loja vende online</span></div>
-          <div class="mini"><strong>Controle total de</strong><span>produtos, pedidos e clientes</span></div>
+          <div class="mini"><strong data-pt="Enquanto você dorme" data-en="While you sleep">Enquanto você dorme</strong><span data-pt="sua loja continua online" data-en="your business stays online">sua loja continua online</span></div>
+          <div class="mini"><strong data-pt="Controle total de" data-en="Full control of">Controle total de</strong><span data-pt="produtos, pedidos e clientes" data-en="products, orders and customers">produtos, pedidos e clientes</span></div>
         </div>
       </aside>
+    </section>
+
+    <section id="portfolio-interativo">
+      <div class="sectionHead">
+        <h2 data-html-pt="Explore os projetos <span class='red'>por dentro</span>" data-html-en="Explore the projects <span class='red'>from the inside</span>">Explore os projetos <span class="red">por dentro</span></h2>
+        <p data-pt="Escolha um projeto, navegue pelas apresentações e entenda as funcionalidades como se estivesse usando o sistema." data-en="Choose a project, browse its presentation and understand the features as if you were using the system.">Escolha um projeto, navegue pelas apresentações e entenda as funcionalidades como se estivesse usando o sistema.</p>
+      </div>
+      <div class="showcase">
+        <div class="projectTabs" role="tablist" aria-label="Projetos Go Viral">
+          <button class="projectTab active" type="button" data-project="brazilian">Brazilian Day</button>
+          <button class="projectTab" type="button" data-project="craic">Craic Barber</button>
+          <button class="projectTab" type="button" data-project="nextride">NextRide</button>
+          <button class="projectTab" type="button" data-project="marluy">Marluy Lavecchia</button>
+          <button class="projectTab" type="button" data-project="caetano">Caetano.exe</button>
+        </div>
+        <div class="projectStage">
+          <div class="projectVisual">
+            <button class="galleryControl prev" type="button" aria-label="Tela anterior">‹</button>
+            <img id="projectImage" src="assets/portfolio/brazilian-day-cover.png" alt="Apresentação Brazilian Day Gort">
+            <button class="galleryControl next" type="button" aria-label="Próxima tela">›</button>
+          </div>
+          <div class="projectInfo">
+            <div class="projectKicker" id="projectType">PLATAFORMA DE EVENTOS</div>
+            <h3 id="projectTitle">Brazilian Day Gort</h3>
+            <p id="projectDescription">Gestão completa para evento multicultural, conectando organização, artistas, expositores, pagamentos e público.</p>
+            <div class="featureChips" id="projectFeatures"></div>
+            <div class="slideCounter" id="slideCounter">01 / 01</div>
+            <div class="actions"><a class="btn" id="projectCta" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20uma%20demonstra%C3%A7%C3%A3o%20de%20uma%20plataforma%20Go%20Viral." target="_blank" rel="noopener" data-pt="Quero algo parecido" data-en="I want something similar">Quero algo parecido</a></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="solucoes">
@@ -162,19 +217,6 @@
         <article class="solutionItem"><div class="icon">E</div><h3>Go Viral Events</h3><p>Cadastros de expositores e artistas, mapa, pagamentos, logística e administração de eventos.</p></article>
         <article class="solutionItem"><div class="icon">DM</div><h3>Automação Instagram</h3><p>Comentários e palavras-chave que iniciam conversas e fluxos automáticos no Direct.</p></article>
         <article class="solutionItem"><div class="icon">{ }</div><h3>Sistemas personalizados</h3><p>Logística, marketplaces, painéis e software desenvolvido conforme a operação de cada empresa.</p></article>
-      </div>
-    </section>
-
-    <section id="projetos">
-      <div class="sectionHead">
-        <h2>Projetos <span class="red">reais</span></h2>
-        <p>Experiência prática aplicando tecnologia em serviços, vendas, eventos e logística.</p>
-      </div>
-      <div class="casesGrid">
-        <article class="caseItem"><strong>Craic Barber Shop</strong><span>Site, agenda, disponibilidade, painel administrativo, notificações e SEO.</span></article>
-        <article class="caseItem"><strong>NextRide</strong><span>Vitrine digital de veículos com fotos, informações, preços, status e contato.</span></article>
-        <article class="caseItem"><strong>Brazilian Day</strong><span>Plataforma para expositores, artistas, mapa interativo, pagamentos e gestão do evento.</span></article>
-        <article class="caseItem"><strong>KML Transport</strong><span>Experiência bilíngue para logística, serviços, valores e solicitação de coleta.</span></article>
       </div>
     </section>
 
@@ -208,7 +250,7 @@
             <li><span class="tick"></span>Painel administrativo</li>
             <li><span class="tick"></span>Checkout básico</li>
           </ul>
-          <div class="price"><small>SETUP</small><strong>R$ 2.000</strong><small>MENSALIDADE • R$ 250/mês</small></div>
+          <div class="price"><small>VALOR DE DESENVOLVIMENTO</small><span class="priceOld">R$ 5.000</span><span class="launchTag">Condição de lançamento</span><strong>R$ 2.000</strong><small>MENSALIDADE • R$ 250/mês</small></div>
           <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20contratar%20o%20plano%20Basic%20Go%20Viral." target="_blank" rel="noopener">Contratar Basic</a>
         </article>
         <article class="card featured">
@@ -277,17 +319,17 @@
     <section>
       <div class="split">
         <div class="box">
-          <h3>Por que isso vende mais?</h3>
-          <p>Quando o cliente entra em uma loja bonita, rápida e organizada, ele sente mais confiança. Quando o pedido é claro, o pagamento é simples e a comunicação é automática, a chance de compra aumenta.</p>
+          <h3 data-pt="Por que isso vende mais?" data-en="Why can this increase sales?">Por que isso vende mais?</h3>
+          <p data-pt="Quando o cliente entra em uma loja bonita, rápida e organizada, ele sente mais confiança. Quando o pedido é claro, o pagamento é simples e a comunicação é automática, a chance de compra aumenta." data-en="A fast, organised and professional store builds confidence. Clear orders, simple payment and automated communication create a better path to purchase.">Quando o cliente entra em uma loja bonita, rápida e organizada, ele sente mais confiança. Quando o pedido é claro, o pagamento é simples e a comunicação é automática, a chance de compra aumenta.</p>
         </div>
         <div class="box">
-          <h3>Por que custa mais?</h3>
-          <p>Porque cada plano adiciona mais partes trabalhando sozinhas: pedidos, estoque, cliente, login, bônus e recompra. Quanto mais o sistema trabalha pela empresa, mais valor ele entrega.</p>
+          <h3 data-pt="Por que custa mais?" data-en="Why do advanced plans cost more?">Por que custa mais?</h3>
+          <p data-pt="Porque cada plano adiciona mais partes trabalhando sozinhas: pedidos, estoque, cliente, login, bônus e recompra. Quanto mais o sistema trabalha pela empresa, mais valor ele entrega." data-en="Each level adds more connected operations: orders, inventory, customer accounts, login, rewards and repeat purchases. More automation means more business value.">Porque cada plano adiciona mais partes trabalhando sozinhas: pedidos, estoque, cliente, login, bônus e recompra. Quanto mais o sistema trabalha pela empresa, mais valor ele entrega.</p>
         </div>
       </div>
     </section>
 
-    <section id="en">
+    <section id="en" hidden>
       <div class="sectionHead">
         <h2>Plans in <span class="red">English</span></h2>
         <p>Clear, simple language for businesses that want a professional online sales system.</p>
@@ -299,7 +341,7 @@
       </div>
     </section>
 
-    <section id="recursos-en">
+    <section id="recursos-en" hidden>
       <div class="sectionHead">
         <h2>Features <span class="red">comparison</span></h2>
         <p>The value is easy to understand: each level adds more control, automation and customer retention.</p>
@@ -330,17 +372,114 @@
 
     <section>
       <div class="promo">
-        <h2>Pronto para vender com mais estrutura?</h2>
-        <p>O próximo passo é simples: me chama, eu entendo seu negócio e te indico o plano certo sem complicar.</p>
+        <h2 data-pt="Pronto para crescer com mais estrutura?" data-en="Ready to grow with more structure?">Pronto para crescer com mais estrutura?</h2>
+        <p data-pt="O próximo passo é simples: me chama, eu entendo seu negócio e te indico a solução certa sem complicar." data-en="The next step is simple: tell me about your business and I will recommend the right solution without making it complicated.">O próximo passo é simples: me chama, eu entendo seu negócio e te indico a solução certa sem complicar.</p>
         <div class="actions" style="justify-content:center">
-          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20do%20e-commerce%20Go%20Viral." target="_blank" rel="noopener">Solicitar demonstração</a>
-          <a class="btn dark" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20talk%20about%20a%20Go%20Viral%20e-commerce%20project." target="_blank" rel="noopener">Hire now</a>
+          <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20da%20Go%20Viral." target="_blank" rel="noopener" data-pt="Solicitar demonstração" data-en="Request a demo">Solicitar demonstração</a>
         </div>
-        <p class="trust">Atendimento digital para Brasil e Irlanda. Cada projeto tem escopo, prazo e investimento definidos antes do início. Resultados comerciais dependem da estratégia, do investimento e da operação de cada negócio.</p>
+        <p class="trust" data-pt="Atendimento digital para Brasil e Irlanda. Cada projeto tem escopo, prazo e investimento definidos antes do início. Resultados comerciais dependem da estratégia, do investimento e da operação de cada negócio." data-en="Digital service for Brazil and Ireland. Every project has its scope, timeline and investment agreed before development. Business results depend on strategy, investment and operation.">Atendimento digital para Brasil e Irlanda. Cada projeto tem escopo, prazo e investimento definidos antes do início. Resultados comerciais dependem da estratégia, do investimento e da operação de cada negócio.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><strong>Go Viral</strong> — sistemas de vendas online para negócios que querem crescer.</footer>
+  <footer class="footer"><strong>Go Viral</strong> — <span data-pt="tecnologia para negócios que querem crescer." data-en="technology for businesses ready to grow.">tecnologia para negócios que querem crescer.</span></footer>
+  <script>
+    (() => {
+      const projects = {
+        brazilian: {
+          title: 'Brazilian Day Gort',
+          type: {pt:'Plataforma de eventos',en:'Event management platform'},
+          description:{pt:'Gestão completa para evento multicultural, conectando organização, artistas, expositores, pagamentos e público.',en:'Complete management for a multicultural event, connecting organisers, artists, exhibitors, payments and the public.'},
+          features:{pt:['Artistas e expositores','Mapa interativo','Pagamentos','Timeline e marketing'],en:['Artists and exhibitors','Interactive map','Payments','Timeline and marketing']},
+          images:['assets/portfolio/brazilian-day-cover.png','assets/portfolio/brazilian-day-02.png','assets/portfolio/brazilian-day-03.png']
+        },
+        craic: {
+          title: 'Craic Barber Shop',
+          type:{pt:'Agendamento e gestão',en:'Booking and management'},
+          description:{pt:'Experiência digital completa para o cliente escolher serviço, dia e horário, com gestão administrativa e notificações.',en:'A complete digital experience for choosing a service, date and time, with admin management and notifications.'},
+          features:{pt:['Serviços','Agenda online','Painel administrativo','Notificações'],en:['Services','Online booking','Admin dashboard','Notifications']},
+          images:['assets/portfolio/craic-barber-cover.png','assets/portfolio/craic-barber-02.png','assets/portfolio/craic-barber-03.png']
+        },
+        nextride: {
+          title:'NextRide',
+          type:{pt:'Plataforma de veículos',en:'Vehicle sales platform'},
+          description:{pt:'Vitrine de carros com busca, página individual, compartilhamento, WhatsApp e painel de gestão de estoque.',en:'A car storefront with search, individual pages, sharing, WhatsApp and an inventory management dashboard.'},
+          features:{pt:['Busca de veículos','Página individual','WhatsApp','Gestão de estoque'],en:['Vehicle search','Individual page','WhatsApp','Inventory management']},
+          images:['assets/portfolio/nextride-01.png','assets/portfolio/nextride-03.png','assets/portfolio/nextride-07.png']
+        },
+        marluy: {
+          title:'Marluy Lavecchia',
+          type:{pt:'Landing pages e captação',en:'Landing pages and lead capture'},
+          description:{pt:'Ecossistema de páginas para ofertas, eventos, redes sociais e formulários de captação qualificada.',en:'A page ecosystem for offers, events, social traffic and qualified lead capture forms.'},
+          features:{pt:['Múltiplas ofertas','Eventos','Formulários','Captação de leads'],en:['Multiple offers','Events','Forms','Lead capture']},
+          images:['assets/portfolio/marluy-01.png','assets/portfolio/marluy-06.png']
+        },
+        caetano: {
+          title:'Caetano.exe',
+          type:{pt:'Hub pessoal interativo',en:'Interactive personal hub'},
+          description:{pt:'Identidade, redes sociais, projetos de tecnologia e fotografia conectados em uma experiência responsiva.',en:'Identity, social media, technology projects and photography connected in a responsive experience.'},
+          features:{pt:['Identidade pessoal','Atalhos sociais','Efeitos interativos','Portfólio fotográfico'],en:['Personal identity','Social shortcuts','Interactive effects','Photography portfolio']},
+          images:['assets/portfolio/caetano-02.png']
+        }
+      };
+
+      let language = 'pt';
+      let currentProject = 'brazilian';
+      let currentSlide = 0;
+      const image = document.getElementById('projectImage');
+      const title = document.getElementById('projectTitle');
+      const type = document.getElementById('projectType');
+      const description = document.getElementById('projectDescription');
+      const features = document.getElementById('projectFeatures');
+      const counter = document.getElementById('slideCounter');
+
+      const staticTranslations = {
+        solutionHeading:{pt:'Soluções Go Viral',en:'Go Viral solutions'},
+        solutionIntro:{pt:'Desenvolvimento completo de plataformas, automações e sistemas para diferentes modelos de negócio.',en:'Complete development of platforms, automations and systems for different business models.'},
+        solutionTitles:{pt:['Go Viral Auto','Go Viral Agenda','Go Viral Shop','Go Viral Events','Automação Instagram','Sistemas personalizados'],en:['Go Viral Auto','Go Viral Booking','Go Viral Shop','Go Viral Events','Instagram Automation','Custom systems']},
+        solutionTexts:{pt:['Vitrine profissional para carros e motos, estoque organizado, detalhes dos veículos e contato direto com compradores.','Agendamentos e gestão para barbeiros, tatuadores, salões, estética e profissionais autônomos.','E-commerce com catálogo, pedidos, pagamentos, estoque e painel administrativo.','Cadastros de expositores e artistas, mapa, pagamentos, logística e administração de eventos.','Comentários e palavras-chave que iniciam conversas e fluxos automáticos no Direct.','Logística, marketplaces, painéis e software desenvolvido conforme a operação de cada empresa.'],en:['Professional storefront for cars and motorcycles, organised inventory, vehicle details and direct buyer contact.','Bookings and management for barbers, tattoo artists, salons, beauty and independent professionals.','E-commerce with catalogue, orders, payments, inventory and admin dashboard.','Artist and exhibitor registration, maps, payments, logistics and event management.','Comments and keywords that start conversations and automated Direct flows.','Logistics, marketplaces, dashboards and software built around each company’s operation.']},
+        processHeading:{pt:'Como funciona',en:'How it works'},
+        processIntro:{pt:'Um processo claro desde a primeira conversa até a entrega da solução.',en:'A clear process from the first conversation to delivery.'},
+        steps:{pt:['Você apresenta seu negócio, sua necessidade e o objetivo.','A Go Viral demonstra a solução adequada ou desenha um projeto personalizado.','Escopo, prazo e investimento são definidos antes do desenvolvimento.','O sistema é entregue com orientação para sua equipe começar a usar.'],en:['You present your business, needs and goals.','Go Viral demonstrates the right solution or designs a custom project.','Scope, timeline and investment are defined before development.','The system is delivered with guidance so your team can start using it.']}
+      };
+
+      function renderProject(){
+        const project = projects[currentProject];
+        currentSlide = Math.max(0,Math.min(currentSlide,project.images.length-1));
+        image.src = project.images[currentSlide];
+        image.alt = `${project.title} — ${currentSlide+1}`;
+        title.textContent = project.title;
+        type.textContent = project.type[language];
+        description.textContent = project.description[language];
+        features.innerHTML = project.features[language].map(item=>`<span>${item}</span>`).join('');
+        counter.textContent = `${String(currentSlide+1).padStart(2,'0')} / ${String(project.images.length).padStart(2,'0')}`;
+      }
+
+      function setLanguage(lang){
+        language = lang;
+        document.documentElement.lang = lang === 'pt' ? 'pt-br' : 'en-ie';
+        document.querySelectorAll('.langBtn').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+        document.querySelectorAll('[data-pt][data-en]').forEach(el=>el.textContent=el.dataset[lang]);
+        document.querySelectorAll('[data-html-pt][data-html-en]').forEach(el=>el.innerHTML=el.dataset[`html${lang==='pt'?'Pt':'En'}`]);
+        document.getElementById('pt').hidden = lang !== 'pt';
+        document.getElementById('recursos-pt').hidden = lang !== 'pt';
+        document.getElementById('en').hidden = lang !== 'en';
+        document.getElementById('recursos-en').hidden = lang !== 'en';
+        const planLink=document.querySelector('[data-plan-link]'); planLink.href=lang==='pt'?'#pt':'#en';
+        const solHead=document.querySelector('#solucoes .sectionHead h2'); solHead.textContent=staticTranslations.solutionHeading[lang];
+        document.querySelector('#solucoes .sectionHead p').textContent=staticTranslations.solutionIntro[lang];
+        document.querySelectorAll('.solutionItem').forEach((item,index)=>{item.querySelector('h3').textContent=staticTranslations.solutionTitles[lang][index];item.querySelector('p').textContent=staticTranslations.solutionTexts[lang][index];});
+        const process=document.querySelector('#processo'); process.querySelector('h2').textContent=staticTranslations.processHeading[lang];process.querySelector('.sectionHead p').textContent=staticTranslations.processIntro[lang];process.querySelectorAll('.step').forEach((step,index)=>step.textContent=staticTranslations.steps[lang][index]);
+        renderProject();
+        localStorage.setItem('goviral-language',lang);
+      }
+
+      document.querySelectorAll('.langBtn').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)));
+      document.querySelectorAll('.projectTab').forEach(btn=>btn.addEventListener('click',()=>{currentProject=btn.dataset.project;currentSlide=0;document.querySelectorAll('.projectTab').forEach(tab=>tab.classList.toggle('active',tab===btn));renderProject();}));
+      document.querySelector('.galleryControl.prev').addEventListener('click',()=>{const total=projects[currentProject].images.length;currentSlide=(currentSlide-1+total)%total;renderProject();});
+      document.querySelector('.galleryControl.next').addEventListener('click',()=>{const total=projects[currentProject].images.length;currentSlide=(currentSlide+1)%total;renderProject();});
+      setLanguage(localStorage.getItem('goviral-language')==='en'?'en':'pt');
+    })();
+  </script>
 </body>
 </html>
