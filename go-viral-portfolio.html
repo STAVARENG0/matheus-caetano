@@ -154,8 +154,9 @@
     .projectTabs{justify-content:center}.projectTab img{box-sizing:border-box;object-fit:cover;padding:0;background:transparent;border-color:rgba(255,255,255,.16)}
     .projectTab[data-project="brazilian"] img{background:#fff;object-fit:contain;padding:3px}
     .projectTab[data-project="marluy"] img{object-fit:contain;background:#000;padding:5px 1px}
-    .projectTab[data-project="craic"] img{object-position:50% 50%;background:#000}
+    .projectTab[data-project="craic"] img{object-position:50% 50%;background:#000;border-color:transparent;box-shadow:0 12px 28px rgba(0,0,0,.32)}
     .projectTab:hover img,.projectTab.active img{transform:translateY(-5px);border-color:var(--red);box-shadow:0 0 0 5px rgba(255,24,53,.08),0 16px 34px rgba(0,0,0,.4)}
+    .projectTab[data-project="craic"]:hover img,.projectTab[data-project="craic"].active img{border-color:transparent;box-shadow:0 16px 34px rgba(0,0,0,.42)}
     .projectTab:focus{outline:none}.projectTab:focus-visible img{outline:2px solid var(--red);outline-offset:5px}
     .projectStage{text-align:center}.projectInfo{text-align:center}.featureChips{justify-content:center}.featureChips span{border-color:rgba(255,24,53,.32);background:rgba(255,24,53,.07)}
     .projectVisual{background:rgba(255,255,255,.018);border-color:rgba(255,255,255,.08)}.galleryControl{background:rgba(0,0,0,.78);border-color:rgba(255,255,255,.38)}
