@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Go Viral Portfólio | E-commerce</title>
-  <meta name="description" content="Planos Go Viral para e-commerce profissional, automação, pagamento, pedidos, estoque e fidelização." />
+  <title>Portfólio Go Viral | Sistemas, automação e e-commerce</title>
+  <meta name="description" content="Conheça as soluções, projetos e planos da Go Viral para e-commerce, automação, agendamento, veículos, eventos e sistemas personalizados." />
   <meta name="theme-color" content="#050505" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Go Viral | E-commerce e sistemas profissionais" />
@@ -93,7 +93,21 @@
 
     .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:var(--radius);padding:24px}.box h3{font-size:30px;margin:0 0 12px;letter-spacing:-.04em}.box p{color:#e2e2e2;line-height:1.58;margin:0}.promo{border:1px solid rgba(242,7,7,.55);background:linear-gradient(135deg,rgba(242,7,7,.18),rgba(255,255,255,.06));border-radius:var(--radius);padding:28px;text-align:center}.promo h2{font-size:clamp(34px,5vw,62px);line-height:.95;margin:0 0 12px;letter-spacing:-.055em}.promo p{color:#e8e8e8;line-height:1.55;max-width:760px;margin:0 auto 20px;font-size:18px;font-weight:700}.footer{padding:34px 0 50px;text-align:center;color:#aaa}
 
-    @media(max-width:880px){.hero,.cards,.split{grid-template-columns:1fr}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
+    .solutionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .solutionItem{border:1px solid rgba(242,7,7,.28);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(242,7,7,.055));border-radius:22px;padding:22px;min-height:180px}
+    .solutionItem .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--red),var(--red2));font-size:20px;font-weight:950;margin-bottom:18px}
+    .solutionItem h3{font-size:24px;margin:0 0 9px;letter-spacing:-.03em}
+    .solutionItem p{margin:0;color:#d0d0d0;line-height:1.55;font-weight:650}
+    .casesGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .caseItem{border-left:4px solid var(--red);background:rgba(255,255,255,.06);border-radius:0 20px 20px 0;padding:20px 22px}
+    .caseItem strong{display:block;font-size:22px;margin-bottom:7px}
+    .caseItem span{display:block;color:#ccc;line-height:1.5;font-weight:650}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:steps}
+    .step{counter-increment:steps;border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:20px;padding:18px;color:#ddd;line-height:1.5;font-weight:700}
+    .step:before{content:counter(steps);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--red);font-weight:950;margin-bottom:14px}
+    .trust{margin:18px auto 0;max-width:780px;text-align:center;color:#999;font-size:13px;line-height:1.55}
+
+    @media(max-width:880px){.hero,.cards,.split,.solutionGrid,.steps{grid-template-columns:1fr}.casesGrid{grid-template-columns:1fr}.hero{padding-top:42px}.sectionHead{align-items:flex-start;flex-direction:column}.miniGrid{grid-template-columns:1fr}.nav a:nth-child(3),.nav a:nth-child(4){display:none}}
     @media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.top .wrap{align-items:flex-start}.brand{font-size:14px}.nav a{font-size:12px;padding:8px 10px}h1{font-size:46px}.lead{font-size:17px}.card{padding:18px}.price strong{font-size:34px}.hero{gap:20px}.promise{padding:20px}}
   </style>
 </head>
@@ -102,9 +116,9 @@
     <div class="wrap">
       <a class="brand" href="index.html">GO <span>VIRAL</span> PORTFOLIO</a>
       <div class="nav">
-        <a href="#pt">Português</a>
-        <a href="#en">English</a>
-        <a href="#recursos-pt">Recursos</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#pt">Planos</a>
         <a href="index.html">Voltar</a>
       </div>
     </div>
@@ -134,6 +148,47 @@
           <div class="mini"><strong>Controle total de</strong><span>produtos, pedidos e clientes</span></div>
         </div>
       </aside>
+    </section>
+
+    <section id="solucoes">
+      <div class="sectionHead">
+        <h2>Soluções <span class="red">Go Viral</span></h2>
+        <p>Desenvolvimento completo de plataformas, automações e sistemas para diferentes modelos de negócio.</p>
+      </div>
+      <div class="solutionGrid">
+        <article class="solutionItem"><div class="icon">A</div><h3>Go Viral Auto</h3><p>Vitrine profissional para carros e motos, estoque organizado, detalhes dos veículos e contato direto com compradores.</p></article>
+        <article class="solutionItem"><div class="icon">AG</div><h3>Go Viral Agenda</h3><p>Agendamentos e gestão para barbeiros, tatuadores, salões, estética e profissionais autônomos.</p></article>
+        <article class="solutionItem"><div class="icon">S</div><h3>Go Viral Shop</h3><p>E-commerce com catálogo, pedidos, pagamentos, estoque e painel administrativo.</p></article>
+        <article class="solutionItem"><div class="icon">E</div><h3>Go Viral Events</h3><p>Cadastros de expositores e artistas, mapa, pagamentos, logística e administração de eventos.</p></article>
+        <article class="solutionItem"><div class="icon">DM</div><h3>Automação Instagram</h3><p>Comentários e palavras-chave que iniciam conversas e fluxos automáticos no Direct.</p></article>
+        <article class="solutionItem"><div class="icon">{ }</div><h3>Sistemas personalizados</h3><p>Logística, marketplaces, painéis e software desenvolvido conforme a operação de cada empresa.</p></article>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="sectionHead">
+        <h2>Projetos <span class="red">reais</span></h2>
+        <p>Experiência prática aplicando tecnologia em serviços, vendas, eventos e logística.</p>
+      </div>
+      <div class="casesGrid">
+        <article class="caseItem"><strong>Craic Barber Shop</strong><span>Site, agenda, disponibilidade, painel administrativo, notificações e SEO.</span></article>
+        <article class="caseItem"><strong>NextRide</strong><span>Vitrine digital de veículos com fotos, informações, preços, status e contato.</span></article>
+        <article class="caseItem"><strong>Brazilian Day</strong><span>Plataforma para expositores, artistas, mapa interativo, pagamentos e gestão do evento.</span></article>
+        <article class="caseItem"><strong>KML Transport</strong><span>Experiência bilíngue para logística, serviços, valores e solicitação de coleta.</span></article>
+      </div>
+    </section>
+
+    <section id="processo">
+      <div class="sectionHead">
+        <h2>Como <span class="red">funciona</span></h2>
+        <p>Um processo claro desde a primeira conversa até a entrega da solução.</p>
+      </div>
+      <div class="steps">
+        <div class="step">Você apresenta seu negócio, sua necessidade e o objetivo.</div>
+        <div class="step">A Go Viral demonstra a solução adequada ou desenha um projeto personalizado.</div>
+        <div class="step">Escopo, prazo e investimento são definidos antes do desenvolvimento.</div>
+        <div class="step">O sistema é entregue com orientação para sua equipe começar a usar.</div>
+      </div>
     </section>
 
     <section id="pt">
@@ -281,6 +336,7 @@
           <a class="btn" href="https://wa.me/353877954824?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20do%20e-commerce%20Go%20Viral." target="_blank" rel="noopener">Solicitar demonstração</a>
           <a class="btn dark" href="https://wa.me/353877954824?text=Hi%2C%20I%20want%20to%20talk%20about%20a%20Go%20Viral%20e-commerce%20project." target="_blank" rel="noopener">Hire now</a>
         </div>
+        <p class="trust">Atendimento digital para Brasil e Irlanda. Cada projeto tem escopo, prazo e investimento definidos antes do início. Resultados comerciais dependem da estratégia, do investimento e da operação de cada negócio.</p>
       </div>
     </section>
   </main>
