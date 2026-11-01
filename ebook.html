@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Criar Artes Virais em Estilo Minecraft / Pixel Art</title>
+  <meta name="description" content="Sinopse e download do guia prático para criar artes virais com estética Minecraft + Pixel Art e bombar seu canal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #0d0f14;
+      --bg-2: #121622;
+      --txt: #e7f2ff;
+      --muted: #a6b3c6;
+      --accent: #9BE15D;
+      --accent-2: #2AF598;
+      --card: #171b27;
+      --shadow: 0 20px 40px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--txt); background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(42,245,152,.08), transparent 60%),
+        radial-gradient(1000px 500px at -10% 120%, rgba(155,225,93,.08), transparent 60%),
+        linear-gradient(180deg,var(--bg-1),var(--bg-2));
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:32px}
+    .hero{
+      position:relative; overflow:hidden; border-radius:18px; background:linear-gradient(160deg,#1b2030,#101521 60%);
+      padding:44px; box-shadow:var(--shadow); border:2px solid rgba(255,255,255,.06);
+    }
+    .pixel-grid{position:absolute; inset:0; opacity:.08; background-image:
+      linear-gradient(to right, rgba(255,255,255,.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.3) 1px, transparent 1px);
+      background-size:24px 24px; mix-blend:overlay; pointer-events:none}
+    .title{font-family:"Press Start 2P", system-ui; line-height:1.25; font-size: clamp(20px, 2.5vw + 12px, 36px); margin:0 0 14px}
+    .kicker{letter-spacing:.12em; text-transform:uppercase; font-weight:800; color:var(--accent); font-size:.85rem}
+    .sub{color:var(--muted); max-width:64ch; font-size:1.05rem}
+    .cta{
+      display:inline-block; margin:22px 0 0; padding:16px 22px; font-weight:800; text-decoration:none;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#0b0e14;
+      border:0; border-radius:12px; box-shadow:0 10px 22px rgba(42,245,152,.25), inset 0 -2px 0 rgba(0,0,0,.2);
+      transition: transform .06s ease, filter .2s ease;
+      position: relative; z-index: 2;
+    }
+    .cta:hover{transform:translateY(-2px); filter:saturate(1.1)}
+    .cta:active{transform:translateY(0)}
+    .cards{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:28px}
+    .card{grid-column: span 12; background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:22px; box-shadow:var(--shadow)}
+    @media(min-width:820px){ .card{grid-column: span 6} }
+    h2{font-family:"Press Start 2P"; font-size: clamp(14px,1.3vw + 8px,20px); margin:0 0 14px}
+    p{margin:0 0 12px; color:#d7e4f5}
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0; color:#c7d6ea}
+    .footer{margin:28px 0 0; color:var(--muted); font-size:.9rem; text-align:center}
+    .pixel-border{position:relative}
+    .pixel-border:before{content:""; position:absolute; inset:-6px; border-radius:16px; padding:6px; background:
+      linear-gradient(90deg, rgba(155,225,93,.35), rgba(42,245,152,.15)); -webkit-mask:
+      linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; z-index:0;}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero pixel-border" aria-labelledby="titulo">
+      <div class="pixel-grid" aria-hidden="true"></div>
+      <p class="kicker">Guia prático</p>
+      <h1 id="titulo" class="title">Como Criar Artes Virais em Estilo Minecraft / Pixel Art e Bombar Seu Canal</h1>
+      <p class="sub">Uma página-resumo do PDF com as ideias-chave: estética Minecraft + pixel art ultra detalhada, iluminação cinematográfica, prompts matadores e fórmulas de conteúdo que disparam engajamento.</p>
+
+      
+      <!-- Botões de ação -->
+      <a class="cta" href="https://www.dropbox.com/scl/fi/8gssn6hrnweuiz8srdzyh/Como-Criar-Artes-Virais-em-Estilo-Minecraft-Pixel-Art-e-Bombar-Seu-Canal.pdf?rlkey=wq6bc1hg8vczmpubuajfomv7z&st=rt99ox12&dl=0" target="_blank" aria-label="Visualizar o e-book online">
+        👀 Visualizar Online
+      </a>
+      <a class="cta" href="https://www.dropbox.com/scl/fi/8gssn6hrnweuiz8srdzyh/Como-Criar-Artes-Virais-em-Estilo-Minecraft-Pixel-Art-e-Bombar-Seu-Canal.pdf?rlkey=wq6bc1hg8vczmpubuajfomv7z&st=rt99ox12&dl=1" aria-label="Baixar o e-book diretamente">
+        ⬇️ Baixar PDF
+      </a>
+
+    </section>
+
+    <section class="cards" aria-label="Conteúdo do guia">
+      <article class="card">
+        <h2>Sinopse</h2>
+        <p>Este guia mostra como transformar qualquer tema em posts altamente compartilháveis combinando <strong>pixel art</strong> detalhada com a estética de <strong>Minecraft</strong> e <strong>iluminação cinematográfica</strong>. Você aprende a construir prompts claros (emoção, atmosfera, paleta e tipografia em blocos), além de replicar um estilo consistente que cria identidade e acelera a produção.</p>
+        <p>O material também ensina a criar séries, produzir em lote, testar legendas e usar <em>trends</em> (jogos, lançamentos, datas, personalidades) para ganhar alcance mais rápido nas redes.</p>
+      </article>
+
+      <article class="card">
+        <h2>Você vai aprender</h2>
+        <ul>
+          <li><strong>Estilo visual:</strong> personagens em blocos, pixel art rica, tipografia retrô e cenas tipo pôster.</li>
+          <li><strong>Estrutura de prompt:</strong> defina emoção + atmosfera, tema da cena e frase curta de impacto.</li>
+          <li><strong>Fórmulas virais:</strong> Humor/Memes, Conselhos/Motivacional, Manchete fictícia e Datas.</li>
+          <li><strong>Produção em escala:</strong> tema da semana, séries numeradas, consistência e <em>batch</em> de 10 peças.</li>
+          <li><strong>Viralização:</strong> misture humor + emoção, frases curtas e identidade visual coerente.</li>
+          <li><strong>Bônus Instagram:</strong> carrossel (2–3 imagens), horários de ouro (12h, 18h, 21h) e stories diários.</li>
+          <li><strong>Bônus Trends:</strong> monitore esportes, cultura pop e feriados; crie um calendário semanal de tendências.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Como usar</h2>
+        <ul>
+          <li>Defina o <strong>tema da semana</strong> (ex.: memes, motivacional, futebol) e crie uma mini-série (Parte 1, 2, 3...).</li>
+          <li>Escreva o <strong>prompt</strong> com emoção + atmosfera + paleta + frase de 2–6 palavras.</li>
+          <li>Produza <strong>em lote</strong> (10 variações), teste legendas e publique em carrossel no Instagram.</li>
+          <li>Todo domingo, monte seu <strong>calendário de trends</strong> e adapte os prompts a assuntos quentes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="footer">Clique no botão para baixar diretamente o PDF (Dropbox com <code>&dl=1</code>).</p>
+  </main>
+
+  <noscript>Ative o JavaScript para melhor experiência. (Nada aqui depende de JS.)</noscript>
+</body>
+</html>

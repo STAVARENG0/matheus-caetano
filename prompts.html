@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📕 Prompts Grátis — Vol. 1</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #ff1744; /* vermelho neon */
+      --fg-accent: #e40f3a;
+      --text: #111111;
+      --panel: #ffffff;
+      --maxw: 720px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      line-height: 1.6;
+    }
+    main.container {
+      max-width: var(--maxw);
+      width: 100%;
+      padding: 2rem;
+      border: 2px solid var(--fg);
+      border-radius: 16px;
+      box-shadow: 0 0 25px var(--fg);
+      background-color: var(--panel);
+      margin: 4vmin;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: clamp(2rem, 2.5rem + 0.5vw, 3rem);
+      color: var(--fg);
+    }
+    h2 {
+      margin: 0 0 1.25rem 0;
+      font-size: clamp(1.125rem, 1rem + 0.4vw, 1.375rem);
+      color: var(--text);
+    }
+    p.lead {
+      margin: 1rem 0 1.5rem;
+      font-size: 1rem;
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      text-align: left;
+      display: inline-block;
+    }
+    ul.features li::before {
+      content: "• ";
+      color: var(--fg);
+      font-weight: 700;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.25rem;
+      background-color: var(--fg);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 6px 20px rgba(255,23,68,0.35);
+      outline: none;
+    }
+    .btn:hover {
+      background-color: var(--fg-accent);
+      transform: translateY(-1px);
+    }
+    .btn:active {
+      transform: translateY(0);
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--fg);
+      outline-offset: 2px;
+    }
+    footer {
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📕 PROMPTS GRÁTIS — VOL. 1</h1>
+      <h2>Os 130 prompts prontos para copiar, colar e usar!</h2>
+    </header>
+
+    <p class="lead">
+      Mais do que um e-book, este é um verdadeiro arsenal de inteligência artificial. Você vai encontrar prompts práticos para:
+    </p>
+
+    <ul class="features" aria-label="Categorias inclusas">
+      <li><strong>📸 Efeitos para fotos</strong></li>
+      <li><strong>✍️ Textos, reportagens e criatividade</strong></li>
+      <li><strong>🎬 Roteiros e storytelling</strong></li>
+      <li><strong>🤖 Automações com IA</strong></li>
+      <li><strong>💡 Ideias, branding, produtividade e até conselhos filosóficos</strong></li>
+    </ul>
+
+    <p class="lead">Tudo organizado por categorias e pronto para uso. É só copiar, colar e ver a mágica acontecer.</p>
+
+    <div class="actions">
+      <a class="btn" href="https://www.dropbox.com/scl/fi/c7uqjwx0oojpqz4gyft0m/130-PROMPTS-QUE-OS-TOP-PLAYERS-NAO-QUEREM-QUE-VOCE-SAIBA.pdf?rlkey=qt11mk4ug9xl9gffhg3itcygp&dl=1">
+        📥 Baixar E-book Grátis
+      </a>
+      <a class="btn" href="https://www.dropbox.com/scl/fi/c7uqjwx0oojpqz4gyft0m/130-PROMPTS-QUE-OS-TOP-PLAYERS-NAO-QUEREM-QUE-VOCE-SAIBA.pdf?rlkey=qt11mk4ug9xl9gffhg3itcygp&dl=0" target="_blank" rel="noopener">
+        🔎 Visualizar Online
+      </a>
+    </div>
+
+    <footer>
+      © 2025 Matheus Caetano — Todos os direitos reservados.
+    </footer>
+  </main>
+</body>
+</html>
